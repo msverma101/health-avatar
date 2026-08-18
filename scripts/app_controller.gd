@@ -79,6 +79,9 @@ var selection_buttons: Array[Button] = []
 var sub_header: Label
 var sub_list: VBoxContainer
 var sub_buttons: Array[Button] = []
+var ui_layer: CanvasLayer
+var ui_root: Control
+var ui_portrait := false
 
 func _ready() -> void:
 	_load_data()
@@ -314,26 +317,73 @@ func _label(text_value: String, size: int, color := TEXT) -> Label:
 	return label
 
 func _build_interface() -> void:
-	var layer := CanvasLayer.new()
-	add_child(layer)
-	var root := Control.new()
-	root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	layer.add_child(root)
+	ui_layer = CanvasLayer.new()
+	add_child(ui_layer)
+	ui_root = Control.new()
+	ui_root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	ui_root.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	ui_layer.add_child(ui_root)
+	_build_layout()
+
+func _process(delta: float) -> void:
+	var t: float = clamp(focus_smoothing * delta, 0.0, 1.0)
+	if not camera_pivot.position.is_equal_approx(focus_target):
+		camera_pivot.position = camera_pivot.position.lerp(focus_target, t)
+	if not is_equal_approx(zoom, focus_zoom):
+		zoom = lerp(zoom, focus_zoom, t)
+		var camera := camera_pivot.get_child(0) as Camera3D
+		camera.position.z = zoom
+	var d_yaw: float = _wrap_angle(focus_yaw - yaw)
+	yaw += d_yaw * t
+	pitch = lerp(pitch, focus_pitch, t)
+	_update_camera()
+	# Rebuild layout when the window crosses the portrait/landscape boundary.
+	var vs := get_viewport().get_visible_rect().size
+	var portrait := vs.y > vs.x
+	if portrait != ui_portrait:
+		ui_portrait = portrait
+		_build_layout()
+
+func _clear_ui() -> void:
+	for c in ui_root.get_children():
+		ui_root.remove_child(c)
+		c.queue_free()
+	selection_buttons.clear()
+	sub_buttons.clear()
+	detail_exercise_list = null
+	detail_title = null
+	detail_summary = null
+	state_badge = null
+	sub_header = null
+	sub_list = null
+
+func _build_layout() -> void:
+	_clear_ui()
+	var vs := get_viewport().get_visible_rect().size
+	if ui_portrait:
+		_build_portrait_ui(vs)
+	else:
+		_build_landscape_ui(vs)
+	# Refresh current selection so the detail panel is populated.
+	if selected >= 0 and selected < muscles.size():
+		_select_muscle(selected)
+	elif detail_title:
+		detail_title.text = "Health Avatar"
+
+func _build_landscape_ui(vs: Vector2) -> void:
 	var heading := _label("HEALTH AVATAR", 26)
 	heading.position = Vector2(32, 24)
-	root.add_child(heading)
-	var subtitle := _label("Interactive anatomy prototype  •  sample activity", 14, MUTED)
+	ui_root.add_child(heading)
+	var subtitle := _label("Interactive anatomy  •  tap a muscle", 14, MUTED)
 	subtitle.position = Vector2(34, 59)
-	root.add_child(subtitle)
+	ui_root.add_child(subtitle)
 
 	var left := PanelContainer.new()
 	left.position = Vector2(28, 96)
-	left.size = Vector2(220, 470)
+	left.size = Vector2(220, min(470, vs.y - 130))
 	left.add_theme_stylebox_override("panel", _box(PANEL, 14))
-	root.add_child(left)
+	ui_root.add_child(left)
 	var scroll := ScrollContainer.new()
-	scroll.custom_minimum_size = Vector2(0, 0)
 	left.add_child(scroll)
 	var list := VBoxContainer.new()
 	list.add_theme_constant_override("separation", 8)
@@ -360,27 +410,29 @@ func _build_interface() -> void:
 	list.add_child(sub_list)
 
 	var right := PanelContainer.new()
-	right.position = Vector2(905, 112)
-	right.size = Vector2(340, 470)
+	right.position = Vector2(vs.x - 380, 96)
+	right.size = Vector2(352, min(470, vs.y - 130))
 	right.add_theme_stylebox_override("panel", _box(PANEL, 14))
-	root.add_child(right)
+	ui_root.add_child(right)
 	var content := VBoxContainer.new()
-	content.add_theme_constant_override("separation", 12)
-	content.add_theme_constant_override("margin_left", 24)
-	content.add_theme_constant_override("margin_top", 22)
+	content.add_theme_constant_override("separation", 10)
+	content.add_theme_constant_override("margin_left", 20)
+	content.add_theme_constant_override("margin_top", 18)
+	content.add_theme_constant_override("margin_right", 12)
+	content.add_theme_constant_override("margin_bottom", 12)
 	right.add_child(content)
-	detail_title = _label("", 28)
+	detail_title = _label("", 26)
 	content.add_child(detail_title)
 	state_badge = _label("", 13)
 	content.add_child(state_badge)
 	content.add_child(HSeparator.new())
-	detail_summary = _label("", 16)
+	detail_summary = _label("", 15)
 	detail_summary.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	detail_summary.custom_minimum_size.y = 75
+	detail_summary.custom_minimum_size.y = 60
 	content.add_child(detail_summary)
 	content.add_child(_label("JEFF NIPPARD EXERCISES", 12, MUTED))
 	var ex_scroll := ScrollContainer.new()
-	ex_scroll.custom_minimum_size.y = 180
+	ex_scroll.custom_minimum_size.y = 150
 	ex_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	content.add_child(ex_scroll)
 	detail_exercise_list = VBoxContainer.new()
@@ -388,23 +440,99 @@ func _build_interface() -> void:
 	detail_exercise_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	ex_scroll.add_child(detail_exercise_list)
 
-	var hint := _label("Click a muscle to select  •  Drag to orbit  •  Wheel to zoom  •  R to reset", 14, MUTED)
-	hint.position = Vector2(380, 665)
-	root.add_child(hint)
-	var legend := _label("● no recent activity     ● recently involved     ● high estimated load", 13, MUTED)
-	legend.position = Vector2(390, 625)
-	root.add_child(legend)
-	var credits := _label(CREDITS, 12, MUTED)
-	credits.position = Vector2(28, 686)
+	var hint := _label("Tap a muscle  •  Drag to orbit  •  Wheel/pinch to zoom  •  R to reset", 13, MUTED)
+	hint.position = Vector2(380, vs.y - 52)
+	ui_root.add_child(hint)
+	var credits := _label(CREDITS, 11, MUTED)
+	credits.position = Vector2(28, vs.y - 26)
 	credits.add_theme_color_override("font_color", Color("#5f6b80"))
-	root.add_child(credits)
-	var refresh := Button.new()
-	refresh.text = "↻ Refresh activity"
-	refresh.position = Vector2(905, 600)
-	refresh.size = Vector2(160, 34)
-	refresh.add_theme_font_size_override("font_size", 14)
-	refresh.pressed.connect(_refresh_activity_states)
-	root.add_child(refresh)
+	ui_root.add_child(credits)
+
+func _build_portrait_ui(vs: Vector2) -> void:
+	# Header
+	var heading := _label("HEALTH AVATAR", 20)
+	heading.position = Vector2(18, 12)
+	ui_root.add_child(heading)
+	var subtitle := _label("Interactive anatomy  •  tap a muscle", 12, MUTED)
+	subtitle.position = Vector2(20, 40)
+	ui_root.add_child(subtitle)
+
+	# Bottom panel: muscle selector (horizontal scroll) + detail.
+	# Sizes are in real screen pixels (stretch mode is disabled), so use
+	# proportions of the viewport rather than fixed values.
+	var panel_h: float = clamp(vs.y * 0.46, 300.0, 460.0)
+	var panel_y: float = vs.y - panel_h
+	var panel := PanelContainer.new()
+	panel.position = Vector2(0, panel_y)
+	panel.size = Vector2(vs.x, panel_h)
+	panel.add_theme_stylebox_override("panel", _box(PANEL, 16))
+	ui_root.add_child(panel)
+	var col := VBoxContainer.new()
+	col.add_theme_constant_override("separation", 6)
+	col.add_theme_constant_override("margin_left", 14)
+	col.add_theme_constant_override("margin_top", 10)
+	col.add_theme_constant_override("margin_right", 14)
+	col.add_theme_constant_override("margin_bottom", 8)
+	panel.add_child(col)
+
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 8)
+	row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	col.add_child(row)
+	var sel_scroll := ScrollContainer.new()
+	sel_scroll.custom_minimum_size.y = 44
+	sel_scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	row.add_child(sel_scroll)
+	var hbox := HBoxContainer.new()
+	hbox.add_theme_constant_override("separation", 8)
+	sel_scroll.add_child(hbox)
+	for i in muscles.size():
+		var button := Button.new()
+		button.text = muscles[i].name
+		button.custom_minimum_size = Vector2(96, 40)
+		button.add_theme_font_size_override("font_size", 14)
+		button.pressed.connect(_select_muscle.bind(i))
+		hbox.add_child(button)
+		selection_buttons.append(button)
+
+	detail_title = _label("", 22)
+	col.add_child(detail_title)
+	state_badge = _label("", 12)
+	col.add_child(state_badge)
+	detail_summary = _label("", 13)
+	detail_summary.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	detail_summary.custom_minimum_size.y = 34
+	col.add_child(detail_summary)
+	var label_row := HBoxContainer.new()
+	col.add_child(label_row)
+	label_row.add_child(_label("EXERCISES", 11, MUTED))
+	sub_header = _label("", 11, MUTED)
+	label_row.add_child(sub_header)
+	# Sub-muscles + exercises live in one shared scroll area so the panel never overflows.
+	var body_scroll := ScrollContainer.new()
+	body_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	body_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	col.add_child(body_scroll)
+	var body_col := VBoxContainer.new()
+	body_col.add_theme_constant_override("separation", 4)
+	body_col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	body_scroll.add_child(body_col)
+	sub_list = VBoxContainer.new()
+	sub_list.add_theme_constant_override("separation", 4)
+	sub_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	body_col.add_child(sub_list)
+	detail_exercise_list = VBoxContainer.new()
+	detail_exercise_list.add_theme_constant_override("separation", 3)
+	detail_exercise_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	body_col.add_child(detail_exercise_list)
+
+	var hint := _label("Drag to orbit  •  Pinch to zoom", 12, MUTED)
+	hint.position = Vector2(18, panel_y - 26)
+	ui_root.add_child(hint)
+	var credits := _label(CREDITS, 10, MUTED)
+	credits.position = Vector2(18, panel_y - 12)
+	credits.add_theme_color_override("font_color", Color("#5f6b80"))
+	ui_root.add_child(credits)
 
 func _box(color: Color, radius: int) -> StyleBoxFlat:
 	var box := StyleBoxFlat.new()
@@ -701,19 +829,6 @@ func _handle_drag(event: InputEventScreenDrag) -> void:
 		if pinch_start_dist > 1.0:
 			zoom = clamp(pinch_start_zoom * (pinch_start_dist / dist), ZOOM_MIN, ZOOM_MAX)
 			_update_camera()
-
-func _process(delta: float) -> void:
-	var t: float = clamp(focus_smoothing * delta, 0.0, 1.0)
-	if not camera_pivot.position.is_equal_approx(focus_target):
-		camera_pivot.position = camera_pivot.position.lerp(focus_target, t)
-	if not is_equal_approx(zoom, focus_zoom):
-		zoom = lerp(zoom, focus_zoom, t)
-		var camera := camera_pivot.get_child(0) as Camera3D
-		camera.position.z = zoom
-	var d_yaw: float = _wrap_angle(focus_yaw - yaw)
-	yaw += d_yaw * t
-	pitch = lerp(pitch, focus_pitch, t)
-	_update_camera()
 
 func _wrap_angle(a: float) -> float:
 	while a > PI:
