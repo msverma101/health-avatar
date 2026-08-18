@@ -91,7 +91,9 @@ func _ready() -> void:
 	_build_world()
 	_build_interface()
 	_refresh_activity_states()
-	_select_muscle(0)
+	# Open on the full-avatar default view rather than auto-zooming into the
+	# first muscle group, so the app starts framed on the whole body.
+	_reset_view()
 
 func _setup_activity_pipeline() -> void:
 	activity_sources = [
@@ -663,8 +665,8 @@ func _tint_muscles() -> void:
 		for i in muscle_meshes.size():
 			muscle_meshes[i].material_override = _material(MUSCLE)
 		return
-	# When a specific sub-muscle is selected, find which same-group muscles
-	# actually overlap (cover) it in 3D space so they can be made transparent.
+	# When a specific sub-muscle is selected, find which meshes (from ANY group)
+	# actually overlap/cover it in 3D space so they can be made transparent.
 	var sel_aabbs: Array[AABB] = []
 	if selected_muscle >= 0:
 		var sel_meshes := group_meshes[selected] if selected < group_meshes.size() else []
@@ -672,20 +674,28 @@ func _tint_muscles() -> void:
 			if _sub_muscle_of(mesh, selected) == selected_muscle:
 				sel_aabbs.append(_mesh_global_aabb(mesh))
 	for i in muscle_meshes.size():
-		var group_index := _group_of(muscle_meshes[i])
+		var mesh := muscle_meshes[i]
+		var group_index := _group_of(mesh)
 		var is_selected := false
 		if group_index == selected:
-			is_selected = selected_muscle == -1 or _sub_muscle_of(muscle_meshes[i], group_index) == selected_muscle
+			is_selected = selected_muscle == -1 or _sub_muscle_of(mesh, group_index) == selected_muscle
 		if is_selected:
-			muscle_meshes[i].material_override = _highlight_material(HIGHLIGHT)
-		elif selected_muscle >= 0 and group_index == selected:
-			# Only muscles that overlap (cover) the selected one go transparent.
-			if _overlaps_any(muscle_meshes[i], sel_aabbs):
-				muscle_meshes[i].material_override = _transparent_material(GREY, 0.18)
+			mesh.material_override = _highlight_material(HIGHLIGHT)
+		elif selected_muscle >= 0:
+			# Any muscle (from any group) whose bounds fully contain the selected
+			# one covers it, so it goes transparent to reveal the deep muscle.
+			# Containment (rather than mere intersection) avoids hiding side-by-side
+			# neighbours such as biceps vs triceps.
+			if _covers_any(mesh, sel_aabbs):
+				mesh.material_override = _transparent_material(GREY, 0.18)
 			else:
-				muscle_meshes[i].material_override = _material(GREY)
+				mesh.material_override = _material(GREY)
 		else:
-			muscle_meshes[i].material_override = _material(GREY)
+			# Whole group selected: highlight the group's meshes, grey the rest.
+			if group_index == selected:
+				mesh.material_override = _highlight_material(HIGHLIGHT)
+			else:
+				mesh.material_override = _material(GREY)
 
 func _mesh_global_aabb(mesh: MeshInstance3D) -> AABB:
 	var local: AABB = mesh.get_aabb()
@@ -702,13 +712,21 @@ func _mesh_global_aabb(mesh: MeshInstance3D) -> AABB:
 			out = out.expand(gc)
 	return out
 
-func _overlaps_any(mesh: MeshInstance3D, sel_aabbs: Array[AABB]) -> bool:
+func _covers_any(mesh: MeshInstance3D, sel_aabbs: Array[AABB]) -> bool:
 	if sel_aabbs.is_empty():
 		return false
 	var box: AABB = _mesh_global_aabb(mesh)
 	for sel in sel_aabbs:
-		if box.intersects(sel):
-			return true
+		# A muscle covers the selected one if a significant share of the selected
+		# muscle's bounds lie inside it. This reveals deep/buried muscles while not
+		# hiding side-by-side neighbours (e.g. biceps vs triceps) whose overlap is
+		# only a small fraction.
+		var inter: AABB = box.intersection(sel)
+		if inter != null:
+			var sel_vol: float = sel.size.x * sel.size.y * sel.size.z
+			var inter_vol: float = inter.size.x * inter.size.y * inter.size.z
+			if sel_vol > 0.0 and inter_vol / sel_vol >= 0.45:
+				return true
 	return false
 
 func _focus_on_group(group_index: int, sub_index: int = -1) -> void:
@@ -733,12 +751,28 @@ func _focus_on_group(group_index: int, sub_index: int = -1) -> void:
 	center /= float(count)
 	focus_target = _frame_target(center, 1.8 if sub_index >= 0 else 2.4)
 	focus_zoom = 1.8 if sub_index >= 0 else 2.4
-	# Rotate the camera to face the muscle: point the camera's +Z offset outward
-	# from the body's vertical axis, so the selected side is brought into view.
-	var outward := Vector3(center.x, 0.0, center.z)
-	if outward.length() > 0.02:
-		outward = outward.normalized()
-		focus_yaw = atan2(outward.x, outward.z)
+	# Rotate the camera to face the muscle. A per-muscle "view" hint (front/back/
+	# side) decides the primary axis; the lateral component is kept so the muscle
+	# is framed from its own side. Falls back to the outward direction otherwise.
+	var view := ""
+	if sub_index >= 0 and muscles[group_index].has("muscles"):
+		view = str(muscles[group_index].muscles[sub_index].get("view", "auto"))
+	var dir := Vector2(center.x, center.z)
+	var target := Vector2.ZERO
+	match view:
+		"front":
+			target = Vector2(dir.x, 1.0)
+		"back":
+			target = Vector2(dir.x, -1.0)
+		"left":
+			target = Vector2(-1.0, dir.y)
+		"right":
+			target = Vector2(1.0, dir.y)
+		_:
+			target = dir
+	if target.length() > 0.02:
+		target = target.normalized()
+		focus_yaw = atan2(target.x, target.y)
 	else:
 		focus_yaw = yaw
 	focus_pitch = 0.05
