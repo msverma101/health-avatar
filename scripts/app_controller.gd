@@ -167,7 +167,7 @@ func _populate_exercises(list: Array) -> void:
 		detail_exercise_list.remove_child(c)
 		c.queue_free()
 	if list.is_empty():
-		var empty := _label("No exercises mapped.", 14, MUTED)
+		var empty := _label("No exercises mapped.", 16, MUTED)
 		detail_exercise_list.add_child(empty)
 		return
 	for entry: Dictionary in list:
@@ -177,7 +177,7 @@ func _populate_exercises(list: Array) -> void:
 		var top := HBoxContainer.new()
 		top.add_theme_constant_override("separation", 8)
 		top.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		var name_lbl := _label("• " + entry["name"], 14)
+		var name_lbl := _label("• " + entry["name"], 17)
 		name_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		name_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		top.add_child(name_lbl)
@@ -185,14 +185,14 @@ func _populate_exercises(list: Array) -> void:
 		if url != "":
 			var watch := Button.new()
 			watch.text = "▶"
-			watch.custom_minimum_size = Vector2(30, 24)
-			watch.add_theme_font_size_override("font_size", 13)
+			watch.custom_minimum_size = Vector2(36, 30)
+			watch.add_theme_font_size_override("font_size", 17)
 			watch.pressed.connect(_open_video.bind(url))
 			top.add_child(watch)
 		row.add_child(top)
 		var subs: Array = entry.get("sub_muscles", [])
 		if not subs.is_empty():
-			var sub_lbl := _label("   " + ", ".join(subs), 11, MUTED)
+			var sub_lbl := _label("   " + ", ".join(subs), 14, MUTED)
 			sub_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 			row.add_child(sub_lbl)
 		detail_exercise_list.add_child(row)
@@ -457,17 +457,17 @@ func _build_landscape_ui(vs: Vector2) -> void:
 
 func _build_portrait_ui(vs: Vector2) -> void:
 	# Compact header so the avatar gets most of the screen.
-	var heading := _label("HEALTH AVATAR", 16)
+	var heading := _label("HEALTH AVATAR", 20)
 	heading.position = Vector2(14, 8)
 	ui_root.add_child(heading)
-	var credits := _label(CREDITS, 9, MUTED)
-	credits.position = Vector2(14, 30)
+	var credits := _label(CREDITS, 12, MUTED)
+	credits.position = Vector2(14, 32)
 	credits.add_theme_color_override("font_color", Color("#5f6b80"))
 	ui_root.add_child(credits)
 
 	var panel_h: float
 	if portrait_panel_open:
-		panel_h = clamp(vs.y * 0.40, 300.0, 390.0)
+		panel_h = clamp(vs.y * 0.46, 320.0, 420.0)
 	else:
 		# Collapsed: just a slim handle + the muscle group chip row.
 		panel_h = 64.0
@@ -489,19 +489,19 @@ func _build_portrait_ui(vs: Vector2) -> void:
 	var handle := HBoxContainer.new()
 	handle.add_theme_constant_override("separation", 8)
 	col.add_child(handle)
-	var handle_lbl := _label("", 14)
+	var handle_lbl := _label("", 16)
 	handle_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	handle.add_child(handle_lbl)
 	var toggle := Button.new()
 	toggle.text = "⌄" if portrait_panel_open else "⌃"
-	toggle.custom_minimum_size = Vector2(44, 26)
-	toggle.add_theme_font_size_override("font_size", 15)
+	toggle.custom_minimum_size = Vector2(52, 30)
+	toggle.add_theme_font_size_override("font_size", 20)
 	toggle.pressed.connect(_toggle_portrait_panel)
 	handle.add_child(toggle)
 
 	# Muscle group chips (horizontal scroll).
 	var sel_scroll := ScrollContainer.new()
-	sel_scroll.custom_minimum_size.y = 38
+	sel_scroll.custom_minimum_size.y = 46
 	sel_scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	sel_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
 	sel_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
@@ -512,8 +512,8 @@ func _build_portrait_ui(vs: Vector2) -> void:
 	for i in muscles.size():
 		var button := Button.new()
 		button.text = muscles[i].name
-		button.custom_minimum_size = Vector2(92, 36)
-		button.add_theme_font_size_override("font_size", 13)
+		button.custom_minimum_size = Vector2(0, 44)
+		button.add_theme_font_size_override("font_size", 17)
 		button.pressed.connect(_select_muscle.bind(i))
 		hbox.add_child(button)
 		selection_buttons.append(button)
@@ -521,7 +521,7 @@ func _build_portrait_ui(vs: Vector2) -> void:
 	if portrait_panel_open:
 		# Sub-muscle chips (horizontal scroll).
 		var sub_scroll := ScrollContainer.new()
-		sub_scroll.custom_minimum_size.y = 34
+		sub_scroll.custom_minimum_size.y = 40
 		sub_scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		sub_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
 		sub_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
@@ -534,18 +534,18 @@ func _build_portrait_ui(vs: Vector2) -> void:
 		var title_row := HBoxContainer.new()
 		title_row.add_theme_constant_override("separation", 8)
 		col.add_child(title_row)
-		detail_title = _label("", 18)
+		detail_title = _label("", 24)
 		detail_title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		title_row.add_child(detail_title)
-		state_badge = _label("", 10)
+		state_badge = _label("", 14)
 		title_row.add_child(state_badge)
 
-		detail_summary = _label("", 12)
+		detail_summary = _label("", 16)
 		detail_summary.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		detail_summary.custom_minimum_size.y = 26
+		detail_summary.custom_minimum_size.y = 32
 		col.add_child(detail_summary)
 
-		var ex_label := _label("EXERCISES", 10, MUTED)
+		var ex_label := _label("EXERCISES", 14, MUTED)
 		col.add_child(ex_label)
 
 		# Exercise list in a scrollable area (rest of the sheet).
@@ -558,8 +558,8 @@ func _build_portrait_ui(vs: Vector2) -> void:
 		detail_exercise_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		ex_scroll.add_child(detail_exercise_list)
 
-	var hint := _label("Tap a muscle  •  Drag to orbit  •  Pinch to zoom", 11, MUTED)
-	hint.position = Vector2(14, panel_y - 22)
+	var hint := _label("Tap a muscle  •  Drag to orbit  •  Pinch to zoom", 14, MUTED)
+	hint.position = Vector2(14, panel_y - 26)
 	ui_root.add_child(hint)
 
 	# Frame the avatar in the visible area above the panel so it is never hidden.
@@ -650,8 +650,8 @@ func _rebuild_sub_list() -> void:
 		button.text = muscles[selected].muscles[j].name
 		button.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		if ui_portrait:
-			button.custom_minimum_size = Vector2(0, 32)
-			button.add_theme_font_size_override("font_size", 12)
+			button.custom_minimum_size = Vector2(0, 38)
+			button.add_theme_font_size_override("font_size", 16)
 		else:
 			button.custom_minimum_size = Vector2(170, 30)
 			button.add_theme_font_size_override("font_size", 13)

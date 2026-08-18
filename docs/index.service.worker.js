@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1787083444|2007754';
+const CACHE_VERSION = '1787083780|3310207';
 /** @type {string} */
 const CACHE_PREFIX = 'Health Avatar-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
