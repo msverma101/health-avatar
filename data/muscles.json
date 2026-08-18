@@ -1,0 +1,167 @@
+[
+  {
+    "id":"neck","name":"Neck","group":"Head & Neck","color":"#c86ae8",
+    "keywords":["sternocleidomast","scalene","splenius","semispinalis","levator scapulae","longus capitis","longus colli","rectus capitis","obliquus capitis","digastric","mylohyoid","geniohyoid","genioglossus","stylohyoid","omohyoid","sternohyoid","sternothyroid","thyrohyoid","platysma","spinalis capitis","spinalis colli","longissimus capitis","longissimus colli","multifidus colli","iliocostalis colli","interspinales","masseter","temporalis","pterygoid"],
+    "summary":"The neck muscles flex, extend, rotate and stabilize the head and cervical spine.",
+    "exercises":["Neck curl","Neck extension","Neck flexion"],
+    "activity":"none",
+    "muscles":[
+      {"id":"sternocleidomastoid","name":"Sternocleidomastoid","keywords":["sternocleidomast"],"summary":"Flexes and rotates the head; largest muscle of the front of the neck.","exercises":["Neck curl","Neck flexion"],"activity":"none"},
+      {"id":"scalenes","name":"Scalenes","keywords":["scalene"],"summary":"Lateral neck muscles that flex and rotate the cervical spine.","exercises":["Neck lateral flexion"],"activity":"none"},
+      {"id":"splenius","name":"Splenius","keywords":["splenius"],"summary":"Neck extensors that extend and rotate the head.","exercises":["Neck extension","Prone neck extension"],"activity":"none"},
+      {"id":"semispinalis","name":"Semispinalis","keywords":["semispinalis"],"summary":"Deep neck extensor that extends and rotates the head and cervical spine.","exercises":["Neck extension"],"activity":"none"},
+      {"id":"levator_scapulae","name":"Levator scapulae","keywords":["levator scapulae"],"summary":"Elevates the scapula and flexes the neck laterally.","exercises":["Shrug","Neck lateral flexion"],"activity":"none"},
+      {"id":"longus_colli_capitis","name":"Longus colli & capitis","keywords":["longus capitis","longus colli"],"summary":"Deep anterior neck flexors that bend the head and neck forward.","exercises":["Neck flexion","Chin tuck"],"activity":"none"},
+      {"id":"suboccipital","name":"Suboccipital muscles","keywords":["rectus capitis","obliquus capitis"],"summary":"Small muscles at the base of the skull that finely control head position.","exercises":["Chin tuck","Neck isometric"],"activity":"none"},
+      {"id":"hyoid","name":"Hyoid muscles","keywords":["digastric","mylohyoid","geniohyoid","genioglossus","stylohyoid","omohyoid","sternohyoid","sternothyroid","thyrohyoid"],"summary":"Muscles attached to the hyoid bone that move the tongue and larynx.","exercises":["None specific"],"activity":"none"},
+      {"id":"platysma","name":"Platysma","keywords":["platysma"],"summary":"Superficial neck muscle that tenses the skin of the neck and lower jaw.","exercises":["Neck curl"],"activity":"none"},
+      {"id":"jaw","name":"Jaw muscles","keywords":["masseter","temporalis","pterygoid"],"summary":"Muscles of mastication that close and move the jaw.","exercises":["None specific"],"activity":"none"}
+    ]
+  },
+  {
+    "id":"chest","name":"Chest","group":"Upper body","color":"#ef6a6a",
+    "keywords":["pectoral"],
+    "summary":"The chest muscles help press the arms forward and inward.",
+    "exercises":["Push-up","Bench press","Chest fly"],
+    "activity":"high",
+    "muscles":[
+      {"id":"pectoralis_major","name":"Pectoralis major","keywords":["pectoralis major"],"summary":"Fan-shaped muscle of the anterior chest; presses and adducts the arm, and rotates it medially.","exercises":["Push-up","Bench press","Chest fly","Dips"],"activity":"high"},
+      {"id":"pectoralis_minor","name":"Pectoralis minor","keywords":["pectoralis minor"],"summary":"Deep chest muscle that stabilizes and draws the scapula forward and downward.","exercises":["Scapular push-up","Chest fly","Wall slide"],"activity":"recent"}
+    ]
+  },
+  {
+    "id":"shoulders","name":"Shoulders","group":"Upper body","color":"#f3a65b",
+    "keywords":["deltoid muscle","trapezius","supraspinatus","infraspinatus","subscapularis","teres"],
+    "summary":"The shoulder muscles support raising and rotating the arms and stabilize the shoulder joint.",
+    "exercises":["Overhead press","Lateral raise","Pike push-up","External rotation"],
+    "activity":"recent",
+    "muscles":[
+      {"id":"deltoid","name":"Deltoid","keywords":["deltoid muscle"],"summary":"Caps the shoulder; abducts the arm and assists in flexion and extension.","exercises":["Overhead press","Lateral raise","Front raise"],"activity":"recent"},
+      {"id":"trapezius","name":"Trapezius","keywords":["trapezius"],"summary":"Large superficial muscle of the upper back; moves and stabilizes the scapula.","exercises":["Shrugs","Face pull","Y-raise"],"activity":"none"},
+      {"id":"supraspinatus","name":"Supraspinatus","keywords":["supraspinatus"],"summary":"Rotator cuff muscle that initiates arm abduction.","exercises":["Side-lying lateral raise","Empty can"],"activity":"recent"},
+      {"id":"infraspinatus","name":"Infraspinatus","keywords":["infraspinatus"],"summary":"Rotator cuff muscle that externally rotates the shoulder.","exercises":["External rotation","Band pull-apart"],"activity":"none"},
+      {"id":"subscapularis","name":"Subscapularis","keywords":["subscapularis"],"summary":"Rotator cuff muscle on the front of the scapula that internally rotates the arm.","exercises":["Internal rotation","Push-up plus"],"activity":"none"},
+      {"id":"teres_major","name":"Teres major","keywords":["teres major"],"summary":"Assists adduction and medial rotation of the arm.","exercises":["Pull-up","Lat pulldown","Row"],"activity":"recent"},
+      {"id":"teres_minor","name":"Teres minor","keywords":["teres minor"],"summary":"Small rotator cuff muscle that externally rotates the shoulder.","exercises":["External rotation","Reverse fly"],"activity":"none"}
+    ]
+  },
+  {
+    "id":"back","name":"Back","group":"Upper body","color":"#e8c86a",
+    "keywords":["latissimus","rhomboid","iliocostal","longissimus","multifidus","semispinalis","splenius","serratus posterior"],
+    "summary":"The back muscles extend, rotate and stabilize the spine and pull the arms down and back.",
+    "exercises":["Pull-up","Row","Deadlift","Back extension"],
+    "activity":"none",
+    "muscles":[
+      {"id":"latissimus_dorsi","name":"Latissimus dorsi","keywords":["latissimus"],"summary":"Large wing-shaped muscle that adducts, extends and internally rotates the arm.","exercises":["Pull-up","Lat pulldown","Row"],"activity":"none"},
+      {"id":"rhomboids","name":"Rhomboids","keywords":["rhomboid"],"summary":"Retract and stabilize the scapula toward the midline.","exercises":["Face pull","Reverse fly","Row"],"activity":"none"},
+      {"id":"erector_spinae","name":"Erector spinae","keywords":["iliocostal","longissimus"],"summary":"Column of deep back muscles that extend and laterally flex the spine.","exercises":["Back extension","Good morning","Deadlift"],"activity":"none"},
+      {"id":"multifidus","name":"Multifidus","keywords":["multifidus"],"summary":"Deep spinal stabilizer that extends and rotates individual vertebral segments.","exercises":["Bird dog","Back extension","Suited deadlift"],"activity":"none"},
+      {"id":"splenius","name":"Splenius","keywords":["splenius"],"summary":"Neck and upper-back muscles that extend, rotate and laterally flex the head.","exercises":["Neck curl","Prone neck extension"],"activity":"none"}
+    ]
+  },
+  {
+    "id":"biceps","name":"Biceps","group":"Arms","color":"#e86a9e",
+    "keywords":["biceps brachii","brachialis","coracobrachialis","brachioradialis"],
+    "summary":"The biceps and related arm flexors bend the elbow and supinate the forearm.",
+    "exercises":["Bicep curl","Hammer curl","Chin-up"],
+    "activity":"none",
+    "muscles":[
+      {"id":"biceps_brachii","name":"Biceps brachii","keywords":["biceps brachii"],"summary":"Two-headed muscle that flexes the elbow and supinates the forearm.","exercises":["Bicep curl","Hammer curl","Chin-up"],"activity":"none"},
+      {"id":"brachialis","name":"Brachialis","keywords":["brachialis muscle"],"summary":"Primary elbow flexor lying under the biceps.","exercises":["Hammer curl","Chin-up","Reverse curl"],"activity":"none"},
+      {"id":"brachioradialis","name":"Brachioradialis","keywords":["brachioradialis"],"summary":"Forearm muscle that flexes the elbow, strongest when the forearm is mid-rotated.","exercises":["Hammer curl","Reverse curl","Farmer carry"],"activity":"none"},
+      {"id":"coracobrachialis","name":"Coracobrachialis","keywords":["coracobrachialis"],"summary":"Assists flexion and adduction of the arm at the shoulder.","exercises":["Pull-up","Row","Push-up"],"activity":"none"}
+    ]
+  },
+  {
+    "id":"triceps","name":"Triceps","group":"Arms","color":"#6ae8b4",
+    "keywords":["triceps"],
+    "summary":"The triceps extend the elbow and contribute to pushing movements.",
+    "exercises":["Tricep dip","Overhead extension","Close-grip push-up"],
+    "activity":"none",
+    "muscles":[
+      {"id":"triceps_brachii","name":"Triceps brachii","keywords":["triceps brachii"],"summary":"Three-headed muscle that extends the elbow and stabilizes the shoulder.","exercises":["Tricep dip","Overhead extension","Close-grip push-up"],"activity":"none"}
+    ]
+  },
+  {
+    "id":"forearms","name":"Forearms","group":"Arms","color":"#e8a86a",
+    "keywords":["flexor carpi","extensor carpi","flexor digitorum","extensor digitorum","pronator","supinator","palmaris"],
+    "summary":"The forearm muscles control the wrist, fingers and grip.",
+    "exercises":["Wrist curl","Farmer carry","Reverse wrist curl"],
+    "activity":"none",
+    "muscles":[
+      {"id":"flexor_carpi","name":"Wrist flexors","keywords":["flexor carpi"],"summary":"Flex the wrist and assist grip.","exercises":["Wrist curl","Farmer carry","Dead hang"],"activity":"none"},
+      {"id":"extensor_carpi","name":"Wrist extensors","keywords":["extensor carpi"],"summary":"Extend the wrist and stabilize grip.","exercises":["Reverse wrist curl","Plate hold"],"activity":"none"},
+      {"id":"finger_flexors","name":"Finger flexors","keywords":["flexor digitorum"],"summary":"Flex the fingers and power the grip.","exercises":["Dead hang","Farmer carry","Wrist curl"],"activity":"none"},
+      {"id":"finger_extensors","name":"Finger extensors","keywords":["extensor digitorum"],"summary":"Extend the fingers and open the hand.","exercises":["Finger extension","Reverse grip carry"],"activity":"none"},
+      {"id":"pronators","name":"Pronators","keywords":["pronator"],"summary":"Pronate the forearm (palm down).","exercises":["Reverse curl","Pronated carry"],"activity":"none"}
+    ]
+  },
+  {
+    "id":"core","name":"Core","group":"Trunk","color":"#66c98b",
+    "keywords":["rectus abdominis","transversus abdominis","abdominal oblique","quadratus lumborum"],
+    "summary":"The core helps stabilize the spine and transfer force between limbs.",
+    "exercises":["Plank","Dead bug","Bird dog"],
+    "activity":"none",
+    "muscles":[
+      {"id":"rectus_abdominis","name":"Rectus abdominis","keywords":["rectus abdominis"],"summary":"The 'six-pack' muscle that flexes the trunk and stabilizes the pelvis.","exercises":["Crunches","Leg raise","Plank"],"activity":"none"},
+      {"id":"transversus_abdominis","name":"Transversus abdominis","keywords":["transversus abdominis"],"summary":"Deep corset-like muscle that compresses the abdomen and stabilizes the core.","exercises":["Hollow hold","Dead bug","Stomach vacuum"],"activity":"none"},
+      {"id":"internal_oblique","name":"Internal oblique","keywords":["internal abdominal oblique"],"summary":"Lateral trunk muscle that rotates and laterally flexes the spine.","exercises":["Russian twist","Side plank","Woodchop"],"activity":"recent"},
+      {"id":"external_oblique","name":"External oblique","keywords":["external abdominal oblique"],"summary":"Superficial lateral trunk muscle that rotates and bends the trunk.","exercises":["Russian twist","Bicycle crunch","Side plank"],"activity":"recent"},
+      {"id":"quadratus_lumborum","name":"Quadratus lumborum","keywords":["quadratus lumborum"],"summary":"Deep back muscle that stabilizes the pelvis and lateral spine.","exercises":["Side plank","Bird dog","Suited deadlift"],"activity":"none"}
+    ]
+  },
+  {
+    "id":"quadriceps","name":"Quadriceps","group":"Lower body","color":"#6ca8e8",
+    "keywords":["rectus femoris","vastus","sartorius"],
+    "summary":"The quadriceps extend the knee and contribute to rising and jumping.",
+    "exercises":["Bodyweight squat","Split squat","Step-up"],
+    "activity":"recent",
+    "muscles":[
+      {"id":"rectus_femoris","name":"Rectus femoris","keywords":["rectus femoris"],"summary":"The only quadriceps head that crosses the hip; extends the knee and flexes the hip.","exercises":["Squat","Lunge","Straight-leg raise"],"activity":"recent"},
+      {"id":"vastus_lateralis","name":"Vastus lateralis","keywords":["vastus lateralis"],"summary":"Outer quadriceps head that extends the knee.","exercises":["Squat","Step-up","Leg press"],"activity":"high"},
+      {"id":"vastus_medialis","name":"Vastus medialis","keywords":["vastus medialis"],"summary":"Inner quadriceps head that extends the knee and stabilizes the kneecap.","exercises":["Squat","Split squat","Wall sit"],"activity":"recent"},
+      {"id":"vastus_intermedius","name":"Vastus intermedius","keywords":["vastus intermedius"],"summary":"Deep quadriceps head that extends the knee.","exercises":["Squat","Lunge","Leg extension"],"activity":"none"},
+      {"id":"sartorius","name":"Sartorius","keywords":["sartorius"],"summary":"Long strap muscle that flexes, abducts and externally rotates the hip.","exercises":["Curtsy lunge","Figure-four stretch","Hip flexor stretch"],"activity":"none"}
+    ]
+  },
+  {
+    "id":"hamstrings","name":"Hamstrings","group":"Lower body","color":"#e86ab0",
+    "keywords":["biceps femoris","semitendinosus","semimembranosus"],
+    "summary":"The hamstrings flex the knee and extend the hip.",
+    "exercises":["Romanian deadlift","Leg curl","Nordic curl"],
+    "activity":"none",
+    "muscles":[
+      {"id":"biceps_femoris","name":"Biceps femoris","keywords":["biceps femoris"],"summary":"Two-headed hamstring that flexes the knee and extends the hip.","exercises":["Romanian deadlift","Leg curl","Nordic curl"],"activity":"none"},
+      {"id":"semitendinosus","name":"Semitendinosus","keywords":["semitendinosus"],"summary":"Inner hamstring that flexes the knee and extends the hip.","exercises":["Romanian deadlift","Leg curl","Straight-leg deadlift"],"activity":"none"},
+      {"id":"semimembranosus","name":"Semimembranosus","keywords":["semimembranosus"],"summary":"Inner hamstring that flexes the knee and medially rotates the leg.","exercises":["Romanian deadlift","Leg curl","Single-leg RDL"],"activity":"none"}
+    ]
+  },
+  {
+    "id":"glutes","name":"Glutes","group":"Lower body","color":"#b48ae8",
+    "keywords":["gluteus maximus muscle","gluteus medius muscle","gluteus minimus muscle","piriformis"],
+    "summary":"The gluteal muscles extend and stabilize the hip during locomotion.",
+    "exercises":["Hip bridge","Lunge","Hip hinge"],
+    "activity":"none",
+    "muscles":[
+      {"id":"gluteus_maximus","name":"Gluteus maximus","keywords":["gluteus maximus muscle"],"summary":"Large hip extensor that powers rising, climbing and running.","exercises":["Hip bridge","Squat","Glute kickback"],"activity":"none"},
+      {"id":"gluteus_medius","name":"Gluteus medius","keywords":["gluteus medius muscle"],"summary":"Abducts the hip and stabilizes the pelvis while walking.","exercises":["Clamshell","Side-lying abduction","Band walks"],"activity":"recent"},
+      {"id":"gluteus_minimus","name":"Gluteus minimus","keywords":["gluteus minimus muscle"],"summary":"Deep abductor that also internally rotates the hip.","exercises":["Side-lying abduction","Clamshell","Hip hitch"],"activity":"none"},
+      {"id":"piriformis","name":"Piriformis","keywords":["piriformis"],"summary":"Deep hip rotator that assists abduction and stabilizes the pelvis.","exercises":["Pigeon stretch","Glute bridge","Figure-four stretch"],"activity":"recent"}
+    ]
+  },
+  {
+    "id":"calves","name":"Calves","group":"Lower body","color":"#6ae8e8",
+    "keywords":["gastrocnemius","soleus","plantaris","tibialis","fibularis","popliteus"],
+    "summary":"The calf muscles point the foot and stabilize the ankle for walking and jumping.",
+    "exercises":["Calf raise","Jump rope","Box jump"],
+    "activity":"none",
+    "muscles":[
+      {"id":"gastrocnemius","name":"Gastrocnemius","keywords":["gastrocnemius"],"summary":"Superficial calf muscle that points the foot and flexes the knee.","exercises":["Standing calf raise","Jump rope","Box jump"],"activity":"none"},
+      {"id":"soleus","name":"Soleus","keywords":["soleus muscle"],"summary":"Deep calf muscle that primarily powers ankle push-off.","exercises":["Seated calf raise","Skipping","Calf raise"],"activity":"none"},
+      {"id":"tibialis_anterior","name":"Tibialis anterior","keywords":["tibialis anterior"],"summary":"Shin muscle that lifts (dorsiflexes) the foot.","exercises":["Toe raise","Ankle dorsiflexion","Shin raise"],"activity":"none"},
+      {"id":"fibularis","name":"Fibularis group","keywords":["fibularis"],"summary":"Lateral lower-leg muscles that evert the foot and stabilize the ankle.","exercises":["Ankle eversion","Balance hold","Single-leg calf raise"],"activity":"none"},
+      {"id":"plantaris","name":"Plantaris","keywords":["plantaris"],"summary":"Small calf muscle that assists knee flexion and ankle plantarflexion.","exercises":["Calf raise","Skipping"],"activity":"none"},
+      {"id":"popliteus","name":"Popliteus","keywords":["popliteus"],"summary":"Unlocks the knee by internally rotating the tibia.","exercises":["Seated leg curl","Knee hinge"],"activity":"none"}
+    ]
+  }
+]

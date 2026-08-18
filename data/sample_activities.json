@@ -1,0 +1,5 @@
+[
+  {"date":"2026-08-05","exercise":"Bench press","duration_minutes":35,"intensity":0.9},
+  {"date":"2026-08-03","exercise":"Bodyweight squat","duration_minutes":25,"intensity":0.6},
+  {"date":"2026-07-31","exercise":"Overhead press","duration_minutes":20,"intensity":0.5}
+]

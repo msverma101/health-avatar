@@ -1,0 +1,19 @@
+# Godot
+.godot/
+.import/
+
+# Build artifacts (native/android/web outputs) - not tracked
+build/
+android/build/
+android/.gradle/
+
+# Android APK
+*.apk
+
+# Local certs / secrets
+build/certs/
+
+# Misc
+*.log
+/tmp/
+probe_*.gd

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadCertificateFileName</key>
+			<string>rootCA.pem</string>
+			<key>PayloadContent</key>
+			<data>MIIEuTCCAyGgAwIBAgIQfH0Nh7+c6/aqvn3z8djrHjANBgkqhkiG9w0BAQsFADB1MR4wHAYDVQQKExVta2NlcnQgZGV2ZWxvcG1lbnQgQ0ExJTAjBgNVBAsMHHRlY2hodWJAaXZ5LWxhcHRvcCAoVGVjaEh1YikxLDAqBgNVBAMMI21rY2VydCB0ZWNoaHViQGl2eS1sYXB0b3AgKFRlY2hIdWIpMB4XDTI2MDgxMjEzMzQwNloXDTM2MDgxMjEzMzQwNlowdTEeMBwGA1UEChMVbWtjZXJ0IGRldmVsb3BtZW50IENBMSUwIwYDVQQLDBx0ZWNoaHViQGl2eS1sYXB0b3AgKFRlY2hIdWIpMSwwKgYDVQQDDCNta2NlcnQgdGVjaGh1YkBpdnktbGFwdG9wIChUZWNoSHViKTCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBALLXeEvXuIJdHQPk+Cd5dqjOMLCD3iyVQ4JsLmqubiLLzwQCmRql5m1P9PCSE2JVp5cfI9CP2jRgIRRqUf5kzAjsG1GhF11S5GllV91a56IsyFkaKXQGM2Lk3Wk/1X7a9o0i5jNPOUuzr7MaMh7oyw0ReVe+rgGE42tYH0bTTg5icJSAPtLl82HuGJupcuY2SitHX51Brykhn1R8iGEuMKggm8f8TJEjUq6Hes4LEAmP1XQofYtFODZwSTt0/Mdaf1m9bcQHY4P69hqr4MuKEZPjP03kJeErFsAw9M1To6rISR25Ue+iBAoakkL1Vt7SPowdoSGshsxp3ppWUa9X2JQqEgIQqcjfT2KMF5Sb6GBjMICqiJHlS77SccSon5Kep3lhlIKNF9zqHLFD316z6pOGYx2YbknqvrpULVil9ynvVDua3E7jYPf47tEZo0DzM1gcFzh2KGrq7P+WU6TSFvdt8E/TRUdcP0U59fys41gQ8Ao6zi/lATvgj35Cs2WIcwIDAQABo0UwQzAOBgNVHQ8BAf8EBAMCAgQwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHQ4EFgQULm2JtovTQPBwgMVoD02GczMBeF8wDQYJKoZIhvcNAQELBQADggGBAJD6p0JUxrSvtuyXlXaLAzf79OCf3WwGd145NYsDSfHrd0Yk8GuhhH1DuQbuw0MAPpmPom2ueyocpFvf58jxfehjah82ene2HHPYINAfpke/zXQeuPpkxECafAkFeUvsoYEFQSlHAn4wxg2bNilbp8SUYFTjo2B+blCCYH7cpEVp+4rBUToThFigKwKpE6Pb64gsVr3BFQCwyAM5+DMY08MwEnqGPxroarHGTxRtN6HFAHAGA1rXJ1vu8UcRAkKhRiZE9ltBXxXqDHFaR9F1503h1Dc38gQHkQJ5r3JC5xkXUd6BsjqE6f2niH+N/3hzuCDmqPCnsyJ7R/Ml+6AUSRHjTZMkjNiybJXdYQtUIftzKVQAhaQEpKEv2XUyoesCzdfOXcbdO6yxpIavhowsEID29y4wQE03MQU6cX0F8irm3sQaxD9xdV2KQLdoyGKuzJVogdmi5efcQhdRc3ufsPiwNmKfHAwSS6Kzz90XPUKC232iFYyBqGllQN4VaeEhFg==</data>
+			<key>PayloadDescription</key>
+			<string>Adds a CA root certificate</string>
+			<key>PayloadDisplayName</key>
+			<string>mkcert Root CA</string>
+			<key>PayloadIdentifier</key>
+			<string>com.mkcert.rootca</string>
+			<key>PayloadType</key>
+			<string>com.apple.security.root</string>
+			<key>PayloadUUID</key>
+			<string>d0a4ad2d-d419-42e4-9f62-56db278c9a56</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>mkcert Root CA</string>
+	<key>PayloadIdentifier</key>
+	<string>com.mkcert.rootca.profile</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>753ae98e-425f-43c4-bb70-656c4d3af0c5</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

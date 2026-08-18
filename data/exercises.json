@@ -1,0 +1,3907 @@
+{
+  "source": "Jeff Nippard programs (Ultimate Exercise Guide, Pure Bodybuilding PPL/UL/FB, Essentials, Transformation System) + embedded YouTube links",
+  "generated": "2026-08-18",
+  "groups": [
+    "neck",
+    "chest",
+    "shoulders",
+    "back",
+    "biceps",
+    "triceps",
+    "forearms",
+    "core",
+    "quadriceps",
+    "hamstrings",
+    "glutes",
+    "calves"
+  ],
+  "exercises": [
+    {
+      "name": "1-Arm 45\u00b0 Cable Rear Delt Flye",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "back"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/6G5DmVaocGM"
+    },
+    {
+      "name": "1-Arm Cable Pulldown",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/01pnZt1uVFI"
+    },
+    {
+      "name": "1-Arm Lat Pull-In",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/RMGuHVQKOms"
+    },
+    {
+      "name": "1-Arm Reverse Pec Deck",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "back"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/WkI6IHmYORY"
+    },
+    {
+      "name": "2-Grip Lat Pulldown",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/QGKhvhMcpPQ"
+    },
+    {
+      "name": "2-Grip Pull-up",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/AUhSQM_c1QQ"
+    },
+    {
+      "name": "45-Degree Dumbbell Preacher Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/WTkQLAethtg"
+    },
+    {
+      "name": "45\u00b0 Hyperextension",
+      "primary": "back",
+      "sub_muscles": [
+        "Erector spinae"
+      ],
+      "muscles": [
+        "back",
+        "hamstrings",
+        "glutes"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/PrwC-5NTCCs"
+    },
+    {
+      "name": "45\u00b0 Incline Barbell Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/vqQ9ok0dEgk"
+    },
+    {
+      "name": "45\u00b0 Incline DB Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/p2t9daxLpB8"
+    },
+    {
+      "name": "45\u00b0 Incline Machine Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/b8fYnZ-usP0"
+    },
+    {
+      "name": "Ab Wheel Rollout",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis",
+        "Transversus abdominis"
+      ],
+      "muscles": [
+        "core",
+        "back"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/gGTgyCU9gcg"
+    },
+    {
+      "name": "Alternating DB Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/kSxgX6HIYxQ"
+    },
+    {
+      "name": "Arm-Out Single-Arm DB Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi",
+        "Rhomboids"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/1ydRu2K6oHg"
+    },
+    {
+      "name": "Arms-Extended 45\u00b0 Hyperextension",
+      "primary": "back",
+      "sub_muscles": [
+        "Erector spinae"
+      ],
+      "muscles": [
+        "back",
+        "hamstrings",
+        "glutes"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/PrwC-5NTCCs"
+    },
+    {
+      "name": "Arnold Press",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "triceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/xBJBTfPcvhM"
+    },
+    {
+      "name": "Assisted Dip",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/mpcPTUAhfto"
+    },
+    {
+      "name": "Assisted Pull-Up",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/6LGHiZ5iZbE"
+    },
+    {
+      "name": "Barbell Back Squat",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes",
+        "hamstrings",
+        "core"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/UGwmUJkTIx8"
+    },
+    {
+      "name": "Barbell Bench Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/nQL5ieH39sw"
+    },
+    {
+      "name": "Barbell Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/UvxrIuG-Xeg"
+    },
+    {
+      "name": "Barbell Front Squat",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes",
+        "core"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/TRwhJ0TCoqI"
+    },
+    {
+      "name": "Barbell Hip Thrust",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/8RwbLtfLu6A"
+    },
+    {
+      "name": "Barbell Incline Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/ad0NL7TH2-I"
+    },
+    {
+      "name": "Barbell JM Press",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps",
+        "chest"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/0F28Ha_9Y8Y"
+    },
+    {
+      "name": "Barbell Lunge",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes",
+        "quadriceps",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/Hr7Lp9cRvr4"
+    },
+    {
+      "name": "Barbell RDL",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes",
+        "back"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/PeXi-Yvn6kI"
+    },
+    {
+      "name": "Barbell Shrug",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Trapezius"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/CQDTdasj9BA"
+    },
+    {
+      "name": "Barbell Squat",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes",
+        "hamstrings",
+        "core"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/UGwmUJkTIx8"
+    },
+    {
+      "name": "Bayesian Cable Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/CWH5J_7kzjM"
+    },
+    {
+      "name": "Bayesian High Cable Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/jQ9rkfvAbIc"
+    },
+    {
+      "name": "Belt Squat",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/JvAc3k4Jdqw"
+    },
+    {
+      "name": "Bench Dip",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps",
+        "chest"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/3CaIq8jZe18"
+    },
+    {
+      "name": "Bent-Knee Dragon Flag",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/N7M5CR541Ak"
+    },
+    {
+      "name": "Bent-Over Cable Pec Flye",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/-7bVljkNWAs"
+    },
+    {
+      "name": "Bent-Over Cable Pec Flye (w/ Integrated Partials)",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/DKaKmnB0BO8"
+    },
+    {
+      "name": "Bent-Over Reverse DB Flye",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "back"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/9BfxdGmekv4"
+    },
+    {
+      "name": "Bicycle Crunch",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis",
+        "Internal oblique",
+        "External oblique"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/OXs4DCS8Ei8"
+    },
+    {
+      "name": "Bodyweight Dip",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/iswhjR-_-Xg"
+    },
+    {
+      "name": "Bottom-2/3 Constant Tension Preacher Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps",
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/vHBedP8oeCA"
+    },
+    {
+      "name": "Bottom-Half DB Flye",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/qJzc-iHKGdg"
+    },
+    {
+      "name": "Bottom-Half Seated Cable Flye",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/tsJMV9Gxw-o"
+    },
+    {
+      "name": "Cable Crossover",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/1LhGmhVFe2Y"
+    },
+    {
+      "name": "Cable Crossover Ladder",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/0TP9kVcWGic"
+    },
+    {
+      "name": "Cable Crunch",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/epBrpaGHMcg"
+    },
+    {
+      "name": "Cable Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/xtZvYrfw2Is"
+    },
+    {
+      "name": "Cable EZ Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/tw1h5XOD23Y"
+    },
+    {
+      "name": "Cable Flye",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/8iXorduqXC8"
+    },
+    {
+      "name": "Cable Hip Abduction",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus medius",
+        "Gluteus minimus"
+      ],
+      "muscles": [
+        "glutes"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/552L1K3Rb_Q"
+    },
+    {
+      "name": "Cable Lat Prayer",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/YrcnBlH8XDA"
+    },
+    {
+      "name": "Cable Lat Pullover",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/IJbGMtS5L_g"
+    },
+    {
+      "name": "Cable Lateral Raise",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/SJqInYJcg5k?t=653"
+    },
+    {
+      "name": "Cable Paused Shrug-In",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Trapezius"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/Hy6f1Lz_PiA"
+    },
+    {
+      "name": "Cable Pull-Through",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus",
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/eFsNZc69m10"
+    },
+    {
+      "name": "Cable Reverse Flye (Mechanical Dropset)",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "back"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/nN5RV1arpfM"
+    },
+    {
+      "name": "Cable Rope Hammer Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Brachialis",
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps",
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/TTgICSfj1hY"
+    },
+    {
+      "name": "Cable Shoulder Press",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "triceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/OfjncdW_Vyc"
+    },
+    {
+      "name": "Cable Shrug-In",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Trapezius"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/0EqU6-o3PAw"
+    },
+    {
+      "name": "Cable Skull Crusher",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/L3lMBRwsFlw"
+    },
+    {
+      "name": "Cable Triceps Kickback",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/oRxTKRtP8RE"
+    },
+    {
+      "name": "Cable Upright Row",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Trapezius",
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/Rm7CPzKLK1M"
+    },
+    {
+      "name": "Cable Wrist Curl",
+      "primary": "forearms",
+      "sub_muscles": [
+        "Wrist flexors"
+      ],
+      "muscles": [
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/S9NEwbiYEBE"
+    },
+    {
+      "name": "Cable Wrist Extension",
+      "primary": "forearms",
+      "sub_muscles": [
+        "Wrist extensors"
+      ],
+      "muscles": [
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/_KI-O0zMv60"
+    },
+    {
+      "name": "Cable Y-Raise",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/xxnjF6ljHmg"
+    },
+    {
+      "name": "Chest-supported DB Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/bsx8PIGIuaI"
+    },
+    {
+      "name": "Chest-Supported Machine Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/ijsSiWSzYw0"
+    },
+    {
+      "name": "Chest-Supported T-Bar Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/q8qlHwcuOtc"
+    },
+    {
+      "name": "Chest-Supported T-Bar Row + Kelso Shrug",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Trapezius",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "shoulders",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/qsmjaYao9pA"
+    },
+    {
+      "name": "Close Grip Dip",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/G7bonPtkitM"
+    },
+    {
+      "name": "Close-Grip Assisted Dip",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/mpcPTUAhfto"
+    },
+    {
+      "name": "Close-Grip Bench Press",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps",
+        "chest"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/Yvz4fHuLfsw"
+    },
+    {
+      "name": "Close-Grip Lat Pulldown",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/7l859qd4E48"
+    },
+    {
+      "name": "Close-Grip Pull-Up",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/3DnqKKfz6wY"
+    },
+    {
+      "name": "Close-Grip Push Up",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/z7Fx-RY4kXw"
+    },
+    {
+      "name": "Close-Grip Seated Cable Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/eE4gq91O2CQ"
+    },
+    {
+      "name": "Concentration Cable Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/BFZyW_7ld0c"
+    },
+    {
+      "name": "Conventional Deadlift",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes",
+        "back",
+        "quadriceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/e8U-AM3c0ow"
+    },
+    {
+      "name": "Cross-Body Cable Y-Raise",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/64RFJSCJuN8"
+    },
+    {
+      "name": "Cross-Body Lat Pull-Around",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/8W67lZ5mwTU"
+    },
+    {
+      "name": "Cuffed Behind-The-Back Lateral Raise",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/fjiOCmFljDM"
+    },
+    {
+      "name": "DB Bench Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/zGXvPjlgVkk"
+    },
+    {
+      "name": "DB Bicep Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/i1YgFZB6alI?t=487"
+    },
+    {
+      "name": "DB Bulgarian Split Squat",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/Z1uu0uHYl20"
+    },
+    {
+      "name": "DB Calf Jumps",
+      "primary": "calves",
+      "sub_muscles": [
+        "Gastrocnemius",
+        "Soleus"
+      ],
+      "muscles": [
+        "calves"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/JkY3nBTbRac"
+    },
+    {
+      "name": "DB Cheat Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/wJGtunD-CfU"
+    },
+    {
+      "name": "DB Concentration Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/Oq7gJuAuJh0"
+    },
+    {
+      "name": "DB French Press",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/5KX0EjOTMaI"
+    },
+    {
+      "name": "DB Hammer Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Brachialis",
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps",
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/xY3sQXYhk7A"
+    },
+    {
+      "name": "DB Incline Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/KSJc8bhSjB0"
+    },
+    {
+      "name": "DB Lat Pullover",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/iaRefVKBH8M"
+    },
+    {
+      "name": "DB Lateral Raise",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/RyztKrzaMNk"
+    },
+    {
+      "name": "DB Lunge",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes",
+        "quadriceps",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/9Pjs2YR2KcI"
+    },
+    {
+      "name": "DB Preacher Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/WTkQLAethtg"
+    },
+    {
+      "name": "DB RDL",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes",
+        "back"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/TZAmthQJkh8"
+    },
+    {
+      "name": "DB Rear Delt Swing",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "back"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/1D4r_xpln88"
+    },
+    {
+      "name": "DB Reverse Lunge",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes",
+        "quadriceps",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/QSGe2Sd8kUI"
+    },
+    {
+      "name": "DB Romanian Deadlift",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes",
+        "back"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/V5u2AP9wBwE"
+    },
+    {
+      "name": "DB Shrug",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Trapezius"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/moFqLlptX7Q"
+    },
+    {
+      "name": "DB Skull Crusher",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/fbLTzgTKOR8"
+    },
+    {
+      "name": "DB Static Lunge",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes",
+        "quadriceps",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/hci6iKFtTkg"
+    },
+    {
+      "name": "DB Step-Up",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/3FNfi_PrP9Y"
+    },
+    {
+      "name": "DB Triceps Kickback",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/YdUUYFgpA7g"
+    },
+    {
+      "name": "DB Walking Lunge",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes",
+        "quadriceps",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/BC_eDtrB-M4"
+    },
+    {
+      "name": "DB Wrist Curl",
+      "primary": "forearms",
+      "sub_muscles": [
+        "Wrist flexors"
+      ],
+      "muscles": [
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/HJx1sIZKDqk"
+    },
+    {
+      "name": "DB Wrist Extension",
+      "primary": "forearms",
+      "sub_muscles": [
+        "Wrist extensors"
+      ],
+      "muscles": [
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/uCAoI5FnLhs"
+    },
+    {
+      "name": "Decline Barbell Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/2Vg5j_UZr-U"
+    },
+    {
+      "name": "Decline Machine Chest Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/AABuMGK9H28"
+    },
+    {
+      "name": "Decline Smith Machine Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/MlqHZEhBGtw"
+    },
+    {
+      "name": "Decline Weighted Crunch",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/ZheUsKqU81M"
+    },
+    {
+      "name": "Deficit Pendlay Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/MmuyHKYCLps"
+    },
+    {
+      "name": "Deficit Pushup",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders",
+        "core"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/3AZSudcQ1N0"
+    },
+    {
+      "name": "Donkey Calf Raise",
+      "primary": "calves",
+      "sub_muscles": [
+        "Gastrocnemius",
+        "Soleus"
+      ],
+      "muscles": [
+        "calves"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/0eQQwveeQzw"
+    },
+    {
+      "name": "Dragon Flag",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/p6VfK1YDhhQ"
+    },
+    {
+      "name": "Dual-Cable Triceps Press",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/SNcQJjXWa_E"
+    },
+    {
+      "name": "Dual-Handle Elbows-Out Cable Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/qryIQcx4cTg"
+    },
+    {
+      "name": "Dual-Handle Lat Pulldown",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi",
+        "Rhomboids"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/NwQ5Ch5t5Vk"
+    },
+    {
+      "name": "Dual-Handle Lat Pulldown (Mid-back + Lats)",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi",
+        "Rhomboids"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/NwQ5Ch5t5Vk"
+    },
+    {
+      "name": "Dumbbell Flye",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/gfIx0U5bTMA"
+    },
+    {
+      "name": "Dumbbell Incline Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/YmlMsvNGTKA"
+    },
+    {
+      "name": "Dumbbell Lateral Raise",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/RyztKrzaMNk"
+    },
+    {
+      "name": "Dumbbell Wrist Curl / Reverse Curl",
+      "primary": "forearms",
+      "sub_muscles": [
+        "Wrist flexors",
+        "Wrist extensors"
+      ],
+      "muscles": [
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/HJx1sIZKDqk"
+    },
+    {
+      "name": "Elbows-In 1-Arm DB Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi",
+        "Rhomboids"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/SwloMZs8ZVk"
+    },
+    {
+      "name": "Elbows-Out Cable Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/qryIQcx4cTg"
+    },
+    {
+      "name": "EZ Bar Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/Dd0t5UOCEUc"
+    },
+    {
+      "name": "EZ-Bar Cable Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/ck1zjNTnFew"
+    },
+    {
+      "name": "EZ-Bar Cheat Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/E2fIvANy9BQ"
+    },
+    {
+      "name": "EZ-Bar Preacher Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/Dn7qgf9iSH8"
+    },
+    {
+      "name": "EZ-Bar Skull Crusher",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/oDKGCsTjAk8"
+    },
+    {
+      "name": "Fat-Grip DB Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii",
+        "Brachialis"
+      ],
+      "muscles": [
+        "biceps",
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/AE49-Oqh-0w"
+    },
+    {
+      "name": "Fat-Grip Preacher Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii",
+        "Brachialis"
+      ],
+      "muscles": [
+        "biceps",
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/Xx6iqyRM5Mk"
+    },
+    {
+      "name": "Flat DB Press (Back off)",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/URQ1Wn7lY3A"
+    },
+    {
+      "name": "Flat DB Press (Heavy)",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/URQ1Wn7lY3A"
+    },
+    {
+      "name": "Floor Skull Crusher",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/QZt9mms9o2E"
+    },
+    {
+      "name": "French Press",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/EAW6XDAlZPo"
+    },
+    {
+      "name": "Front Squat",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes",
+        "core"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/TRwhJ0TCoqI"
+    },
+    {
+      "name": "Glute Kickback",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/JLS9Cvw_CHY"
+    },
+    {
+      "name": "Glute-Ham Raise",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/9ksG-O0ZUto"
+    },
+    {
+      "name": "Goblet Squat",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes",
+        "core"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/S2agsLlUSII"
+    },
+    {
+      "name": "Good Morning",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes",
+        "back"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/c-Yj6God14s"
+    },
+    {
+      "name": "Hack Squat",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/TWUnnDK8rck"
+    },
+    {
+      "name": "Hack Squat (Back off)",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/wEgQUCdtFLg"
+    },
+    {
+      "name": "Hack Squat (Heavy)",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/wEgQUCdtFLg"
+    },
+    {
+      "name": "Half-Kneeling 1-Arm Lat Pulldown",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/r8K1Fkch5go"
+    },
+    {
+      "name": "Hammer Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Brachialis",
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps",
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/xY3sQXYhk7A"
+    },
+    {
+      "name": "Hammer Preacher Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii",
+        "Brachialis"
+      ],
+      "muscles": [
+        "biceps",
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/dEdnC3ca-Yg"
+    },
+    {
+      "name": "Hanging Leg Raise",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/rGqwkinWqYI"
+    },
+    {
+      "name": "Head Curl",
+      "primary": "neck",
+      "sub_muscles": [
+        "Sternocleidomastoid"
+      ],
+      "muscles": [
+        "neck"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/qpzwJd7mr3Y"
+    },
+    {
+      "name": "Head Harness Neck Extension",
+      "primary": "neck",
+      "sub_muscles": [
+        "Splenius",
+        "Semispinalis"
+      ],
+      "muscles": [
+        "neck"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/Mp2kp2tVhGQ"
+    },
+    {
+      "name": "Helms DB Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/axoeDmW0oAY?t=419"
+    },
+    {
+      "name": "High-Cable Cuffed Lateral Raise",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/8m2jNHBP580"
+    },
+    {
+      "name": "High-Cable Lateral Raise",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/MnMux3Wc0Ac"
+    },
+    {
+      "name": "Hip Thrust",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/V8uasBf-Es8"
+    },
+    {
+      "name": "Incline Chest-Supported DB Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/bsx8PIGIuaI"
+    },
+    {
+      "name": "Incline DB Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/Nf1_Ok0LDcI"
+    },
+    {
+      "name": "Incline DB Kelso Shrug",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Trapezius"
+      ],
+      "muscles": [
+        "shoulders",
+        "back"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/vYLLZHL9G0w"
+    },
+    {
+      "name": "Incline DB Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/p2t9daxLpB8"
+    },
+    {
+      "name": "Incline DB Stretch-Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/Z0NIYS9nyoQ"
+    },
+    {
+      "name": "Incline DB Y-Raise",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/xaOQJjzNrd8"
+    },
+    {
+      "name": "Incline Machine Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/b8fYnZ-usP0"
+    },
+    {
+      "name": "Inverse DB Zottman Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii",
+        "Brachioradialis"
+      ],
+      "muscles": [
+        "biceps",
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/jBIvbpyb99M"
+    },
+    {
+      "name": "Inverse Zottman Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii",
+        "Brachioradialis"
+      ],
+      "muscles": [
+        "biceps",
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/oU0Lb2dD_js"
+    },
+    {
+      "name": "Katana Triceps Extension",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/R7f45Mv7yyg"
+    },
+    {
+      "name": "Kneeling Overhead Cable Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/qpzwJd7mr3Y"
+    },
+    {
+      "name": "Lat Pulldown (Wide Grip)",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/nDl3VjkLPQE"
+    },
+    {
+      "name": "Lat-Focused Cable Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi",
+        "Rhomboids"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/w11Kqjm-ycE"
+    },
+    {
+      "name": "Lateral Band Walk",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus medius",
+        "Gluteus minimus"
+      ],
+      "muscles": [
+        "glutes"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/sOYvvFPYdsU"
+    },
+    {
+      "name": "Lean-Back Lat Pulldown",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/Zjzt4MRbAlc"
+    },
+    {
+      "name": "Lean-In DB Lateral Raise",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/BmYuAG2j2co"
+    },
+    {
+      "name": "Leg Extension",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/uFbNtqP966A"
+    },
+    {
+      "name": "Leg Press",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/1yKAQLVV_XI"
+    },
+    {
+      "name": "Leg Press Calf Press",
+      "primary": "calves",
+      "sub_muscles": [
+        "Gastrocnemius",
+        "Soleus"
+      ],
+      "muscles": [
+        "calves"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/S6DTPNZ_-F4"
+    },
+    {
+      "name": "Leg Press Toe Press",
+      "primary": "calves",
+      "sub_muscles": [
+        "Gastrocnemius",
+        "Soleus"
+      ],
+      "muscles": [
+        "calves"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/VJ_9xii47Sk"
+    },
+    {
+      "name": "Long-Lever Plank",
+      "primary": "core",
+      "sub_muscles": [
+        "Transversus abdominis",
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/9rFS1gg0vJM"
+    },
+    {
+      "name": "Low Incline DB Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/YmlMsvNGTKA"
+    },
+    {
+      "name": "Low Incline Machine Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/JmsY9nSqX9E"
+    },
+    {
+      "name": "Low Incline Smith Machine Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/2ITgeRy2z2s"
+    },
+    {
+      "name": "Low-Incline Dumbbell Flye",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/gfIx0U5bTMA"
+    },
+    {
+      "name": "Lunge",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes",
+        "quadriceps",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/SEjKxJGg_C8"
+    },
+    {
+      "name": "Lying Leg Curl",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/sX4tGtcc62k"
+    },
+    {
+      "name": "Lying Leg Raise",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/4WTBHsoAS1I"
+    },
+    {
+      "name": "Lying Paused Rope Face Pull",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid",
+        "Trapezius"
+      ],
+      "muscles": [
+        "shoulders",
+        "back"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/jTmI3Q1iQUk"
+    },
+    {
+      "name": "Lying Reverse DB Flye",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "back"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/MXGZHJFQ9bE"
+    },
+    {
+      "name": "Machine Chest Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/k1S_Any3NIA?t=240"
+    },
+    {
+      "name": "Machine Chest Press (Back off)",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/k1S_Any3NIA?t=240"
+    },
+    {
+      "name": "Machine Chest Press (Heavy)",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/k1S_Any3NIA?t=240"
+    },
+    {
+      "name": "Machine Crunch",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/K2yKEoazT3g"
+    },
+    {
+      "name": "Machine Hip Abduction",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus medius",
+        "Gluteus minimus"
+      ],
+      "muscles": [
+        "glutes"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/pozooPg6PBE"
+    },
+    {
+      "name": "Machine Hip Adduction",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus medialis",
+        "Vastus lateralis"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/FMSCZYu1JhE"
+    },
+    {
+      "name": "Machine Hip Thrust",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/ELgSmlwFsFQ"
+    },
+    {
+      "name": "Machine Lat Pullover",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/YT0K0PBl3nk"
+    },
+    {
+      "name": "Machine Lateral Raise",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/5hZCR8lTdBk"
+    },
+    {
+      "name": "Machine Preacher Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/R2iUnBxFtis"
+    },
+    {
+      "name": "Machine Pulldown",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/CrfvmSGfT2c"
+    },
+    {
+      "name": "Machine Shoulder Press",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "triceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/SCQVmN1gYsk"
+    },
+    {
+      "name": "Machine Squat (Back off)",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/N56STpGGRYE"
+    },
+    {
+      "name": "Machine Squat (Heavy)",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/N56STpGGRYE"
+    },
+    {
+      "name": "Meadows Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/f2JDJV0AnyY?t=336"
+    },
+    {
+      "name": "Medicine Ball Russian Twists",
+      "primary": "core",
+      "sub_muscles": [
+        "Internal oblique",
+        "External oblique",
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/eJF2gdt9PcE"
+    },
+    {
+      "name": "Modified Candlestick",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/-XVRl8KU7x0"
+    },
+    {
+      "name": "Modified Zottman Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii",
+        "Brachioradialis"
+      ],
+      "muscles": [
+        "biceps",
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/J0l0qQCy80Q"
+    },
+    {
+      "name": "N1-Style Short-Head Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/qpzwJd7mr3Y"
+    },
+    {
+      "name": "Neck Curl / Extension",
+      "primary": "neck",
+      "sub_muscles": [
+        "Sternocleidomastoid",
+        "Splenius"
+      ],
+      "muscles": [
+        "neck"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/CuIkTLjx6fo"
+    },
+    {
+      "name": "Neutral-Grip Close-Grip Lat Pulldown",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/7l859qd4E48"
+    },
+    {
+      "name": "Neutral-Grip Lat Pulldown",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/eiFpSJiyHnA"
+    },
+    {
+      "name": "Neutral-Grip Pull-Up",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/b0ypSz63UGo"
+    },
+    {
+      "name": "Neutral-Grip Seated Cable Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/hM7XHxQgvLk"
+    },
+    {
+      "name": "Nordic Ham Curl",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/fzpYiRtzmFA"
+    },
+    {
+      "name": "Overhead Cable Triceps Extension",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/GYoUoVNlbGc"
+    },
+    {
+      "name": "Overhead Cable Triceps Extension (Bar)",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/9_I1PqZAjdA"
+    },
+    {
+      "name": "Overhead DB Triceps Extension",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/5KX0EjOTMaI"
+    },
+    {
+      "name": "Paused Assisted Dip",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/RyGOGviYWts"
+    },
+    {
+      "name": "Paused Barbell RDL",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes",
+        "back"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/74uXdbCYZQY"
+    },
+    {
+      "name": "Pec Deck",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/CI88L1VNvEs"
+    },
+    {
+      "name": "Pec Deck (w/ Integrated Partials)",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/NPa8YvUg4CM"
+    },
+    {
+      "name": "Pendlay Deficit Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/MmuyHKYCLps"
+    },
+    {
+      "name": "Pendlay Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/axoeDmW0oAY?t=185"
+    },
+    {
+      "name": "Plate-Loaded Neck Curls",
+      "primary": "neck",
+      "sub_muscles": [
+        "Sternocleidomastoid",
+        "Longus colli & capitis"
+      ],
+      "muscles": [
+        "neck"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/CuIkTLjx6fo"
+    },
+    {
+      "name": "Plate-Loaded Neck Extension",
+      "primary": "neck",
+      "sub_muscles": [
+        "Splenius",
+        "Semispinalis",
+        "Levator scapulae"
+      ],
+      "muscles": [
+        "neck"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/av_h904QAEY"
+    },
+    {
+      "name": "Plate-Weighted Crunch",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/mP99WSRI6Bc"
+    },
+    {
+      "name": "Preacher Hammer Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Brachialis",
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps",
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/sInGFVj-bJA"
+    },
+    {
+      "name": "Rear Delt 45\u00b0 Cable Flye",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "back"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/8iXorduqXC8"
+    },
+    {
+      "name": "Rear Delt Flye",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "back"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/6G5DmVaocGM"
+    },
+    {
+      "name": "Reverse Cable Crossover",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/STZ3Twq5fgc"
+    },
+    {
+      "name": "Reverse Flye",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "back"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/MXGZHJFQ9bE"
+    },
+    {
+      "name": "Reverse Nordic",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Rectus femoris",
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius"
+      ],
+      "muscles": [
+        "quadriceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/D-kqUKEQZZ0"
+    },
+    {
+      "name": "Reverse Pec Deck (w/ Integrated Partials)",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "back"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/DKaKmnB0BO8"
+    },
+    {
+      "name": "Reverse-Grip Cable Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii",
+        "Brachialis"
+      ],
+      "muscles": [
+        "biceps",
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/xtZvYrfw2Is"
+    },
+    {
+      "name": "Reverse-Grip EZ-Bar Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii",
+        "Brachialis"
+      ],
+      "muscles": [
+        "biceps",
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/IZNaQzWXgwA"
+    },
+    {
+      "name": "Roman Chair Leg Raise",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/irOzFVqJ0IE"
+    },
+    {
+      "name": "Romanian Deadlift",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes",
+        "back"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/_oyxCn2iSjU?t=95"
+    },
+    {
+      "name": "Rope Face Pull",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid",
+        "Trapezius"
+      ],
+      "muscles": [
+        "shoulders",
+        "back"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/GhrVM-jPIEA"
+    },
+    {
+      "name": "Seated Barbell Shoulder Press",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "triceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/rRpQJAJZgiI"
+    },
+    {
+      "name": "Seated Cable Deadlift",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes",
+        "back"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/FCe6PIQbB-s"
+    },
+    {
+      "name": "Seated Cable Flye",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/tsJMV9Gxw-o"
+    },
+    {
+      "name": "Seated Cable Kelso Shrug",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Trapezius"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/qULwEAa7Lfo"
+    },
+    {
+      "name": "Seated Cable Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/FbWfA_s0XL8?t=273"
+    },
+    {
+      "name": "Seated Calf Raise",
+      "primary": "calves",
+      "sub_muscles": [
+        "Soleus",
+        "Gastrocnemius"
+      ],
+      "muscles": [
+        "calves"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/6pfj0G7VKdM"
+    },
+    {
+      "name": "Seated DB French Press",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/5KX0EjOTMaI"
+    },
+    {
+      "name": "Seated DB Shoulder Press",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "triceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/B8PB5RPhTWQ"
+    },
+    {
+      "name": "Seated Dip Machine",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps",
+        "chest"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/BRueufxDP2Q"
+    },
+    {
+      "name": "Seated Hamstring Curl",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/2CMmuH4qJh0"
+    },
+    {
+      "name": "Seated Leg Curl",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/yv0aAY7M1mk"
+    },
+    {
+      "name": "Seated Smith Machine Shoulder Press",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "triceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/J9zEpfM5Cjw"
+    },
+    {
+      "name": "Single-arm Overhead Cable Triceps Extension",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/eNHOA90QcAg"
+    },
+    {
+      "name": "Single-Leg Leg Extension",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/tfOc1-AV9lg"
+    },
+    {
+      "name": "Single-Leg Leg Press (Back off)",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/Gvgm70v4sPU"
+    },
+    {
+      "name": "Single-Leg Leg Press (Heavy)",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/Gvgm70v4sPU"
+    },
+    {
+      "name": "Sissy Squat",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/eWAjlO4FWPQ"
+    },
+    {
+      "name": "Skull Crusher",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/HpW1nqPsGvw"
+    },
+    {
+      "name": "Slow-Eccentric Bayesian Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/Kf2kXBoIgM0"
+    },
+    {
+      "name": "Slow-Eccentric DB RDL",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes",
+        "back"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/9XIvGzgvoE0"
+    },
+    {
+      "name": "Slow-Eccentric EZ-Bar Skull Crusher",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/oDKGCsTjAk8"
+    },
+    {
+      "name": "Smith Machine Bench Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/cJ8JrXUQ3xQ"
+    },
+    {
+      "name": "Smith Machine Incline Press",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/q3agRhqt_WA"
+    },
+    {
+      "name": "Smith Machine JM Press",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps",
+        "chest"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/zv5bwzjN1Q4"
+    },
+    {
+      "name": "Smith Machine Lunge",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes",
+        "quadriceps",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/SEjKxJGg_C8"
+    },
+    {
+      "name": "Smith Machine Reverse Lunge",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes",
+        "quadriceps",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/D0KZo_gBsw0"
+    },
+    {
+      "name": "Smith Machine Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/Wmivm40AV3Q"
+    },
+    {
+      "name": "Smith Machine Split Squat",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/vRCd8Pz3tuI"
+    },
+    {
+      "name": "Smith Machine Squat",
+      "primary": "quadriceps",
+      "sub_muscles": [
+        "Vastus lateralis",
+        "Vastus medialis",
+        "Vastus intermedius",
+        "Rectus femoris"
+      ],
+      "muscles": [
+        "quadriceps",
+        "glutes",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/lWIEZ6NxPMk"
+    },
+    {
+      "name": "Smith Machine Static Lunge",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes",
+        "quadriceps",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/SEjKxJGg_C8"
+    },
+    {
+      "name": "Snatch-Grip RDL",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes",
+        "back"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/CenC1xVpMvI"
+    },
+    {
+      "name": "Spider Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/jw9tvoGLJmo"
+    },
+    {
+      "name": "Standing Calf Raise",
+      "primary": "calves",
+      "sub_muscles": [
+        "Gastrocnemius",
+        "Soleus"
+      ],
+      "muscles": [
+        "calves"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/6lR2JdxUh7w"
+    },
+    {
+      "name": "Standing DB Arnold Press",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders",
+        "triceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/xBJBTfPcvhM"
+    },
+    {
+      "name": "Standing DB Curl",
+      "primary": "biceps",
+      "sub_muscles": [
+        "Biceps brachii"
+      ],
+      "muscles": [
+        "biceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/vneVQlN7LR4"
+    },
+    {
+      "name": "Standing Plate Abduction",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus medius",
+        "Gluteus minimus"
+      ],
+      "muscles": [
+        "glutes"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/Y_qP7FEsn7A"
+    },
+    {
+      "name": "Stiff-Leg Deadlift",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes",
+        "back"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/OXsW3TJvn6g"
+    },
+    {
+      "name": "Stomach Vacuums",
+      "primary": "core",
+      "sub_muscles": [
+        "Transversus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/dyFeDqVApFU"
+    },
+    {
+      "name": "Straight-Bar Lat Prayer",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/YrcnBlH8XDA"
+    },
+    {
+      "name": "Sumo Deadlift",
+      "primary": "hamstrings",
+      "sub_muscles": [
+        "Biceps femoris",
+        "Semitendinosus",
+        "Semimembranosus"
+      ],
+      "muscles": [
+        "hamstrings",
+        "glutes",
+        "back",
+        "quadriceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/c2go1amvyXs"
+    },
+    {
+      "name": "Super-ROM DB Lateral Raise",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Deltoid"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/nW5pGot-Hok"
+    },
+    {
+      "name": "Super-ROM Overhand Cable Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/WtokJfvWl-I"
+    },
+    {
+      "name": "Supported DB Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/okCWuhxJEvw"
+    },
+    {
+      "name": "T-Bar Row",
+      "primary": "back",
+      "sub_muscles": [
+        "Rhomboids",
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/q8qlHwcuOtc"
+    },
+    {
+      "name": "Trap-Bar Shrug",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Trapezius"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/moFqLlptX7Q"
+    },
+    {
+      "name": "Triceps Diverging Pressdown (Long Rope or 2 Ropes)",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/o4eazahiXQw"
+    },
+    {
+      "name": "Triceps Pressdown",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/B5S2mbg0g5c"
+    },
+    {
+      "name": "Triceps Pressdown (Bar)",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/o4eazahiXQw"
+    },
+    {
+      "name": "Triceps Pressdown (Rope)",
+      "primary": "triceps",
+      "sub_muscles": [
+        "Triceps brachii"
+      ],
+      "muscles": [
+        "triceps"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/bCa036rGtVU"
+    },
+    {
+      "name": "Walking Lunge",
+      "primary": "glutes",
+      "sub_muscles": [
+        "Gluteus maximus"
+      ],
+      "muscles": [
+        "glutes",
+        "quadriceps",
+        "hamstrings"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/BC_eDtrB-M4"
+    },
+    {
+      "name": "Weight-Plate Crunch",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/mP99WSRI6Bc"
+    },
+    {
+      "name": "Weighted Crunch",
+      "primary": "core",
+      "sub_muscles": [
+        "Rectus abdominis"
+      ],
+      "muscles": [
+        "core"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/Q_n8cSQLhog"
+    },
+    {
+      "name": "Weighted Dip (Back off)",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/yN6Q1UI_xkE?t=75"
+    },
+    {
+      "name": "Weighted Dip (Heavy)",
+      "primary": "chest",
+      "sub_muscles": [
+        "Pectoralis major"
+      ],
+      "muscles": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/yN6Q1UI_xkE?t=75"
+    },
+    {
+      "name": "Wide-Grip Barbell Shrug",
+      "primary": "shoulders",
+      "sub_muscles": [
+        "Trapezius"
+      ],
+      "muscles": [
+        "shoulders"
+      ],
+      "type": "isolation",
+      "url": "https://youtu.be/moFqLlptX7Q"
+    },
+    {
+      "name": "Wide-Grip Pull-Up",
+      "primary": "back",
+      "sub_muscles": [
+        "Latissimus dorsi"
+      ],
+      "muscles": [
+        "back",
+        "biceps"
+      ],
+      "type": "compound",
+      "url": "https://youtu.be/yGnp0HU8BnA"
+    },
+    {
+      "name": "Wrist Roller",
+      "primary": "forearms",
+      "sub_muscles": [
+        "Wrist flexors",
+        "Wrist extensors",
+        "Finger flexors"
+      ],
+      "muscles": [
+        "forearms"
+      ],
+      "type": "isolation",
+      "url": ""
+    }
+  ]
+}
