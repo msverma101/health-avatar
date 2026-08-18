@@ -77,11 +77,13 @@ var detail_summary: Label
 var state_badge: Label
 var selection_buttons: Array[Button] = []
 var sub_header: Label
-var sub_list: VBoxContainer
+var sub_list: BoxContainer
 var sub_buttons: Array[Button] = []
 var ui_layer: CanvasLayer
 var ui_root: Control
 var ui_portrait := false
+var portrait_panel_open := true
+var portrait_shift := 0.0
 
 func _ready() -> void:
 	_load_data()
@@ -157,6 +159,8 @@ func _exercises_for_group(group_id: String) -> Array:
 	return exercises_by_group[group_id]
 
 func _populate_exercises(list: Array) -> void:
+	if detail_exercise_list == null:
+		return
 	for c in detail_exercise_list.get_children():
 		detail_exercise_list.remove_child(c)
 		c.queue_free()
@@ -363,6 +367,7 @@ func _build_layout() -> void:
 	if ui_portrait:
 		_build_portrait_ui(vs)
 	else:
+		portrait_shift = 0.0
 		_build_landscape_ui(vs)
 	# Refresh current selection so the detail panel is populated.
 	if selected >= 0 and selected < muscles.size():
@@ -449,90 +454,115 @@ func _build_landscape_ui(vs: Vector2) -> void:
 	ui_root.add_child(credits)
 
 func _build_portrait_ui(vs: Vector2) -> void:
-	# Header
-	var heading := _label("HEALTH AVATAR", 20)
-	heading.position = Vector2(18, 12)
+	# Compact header so the avatar gets most of the screen.
+	var heading := _label("HEALTH AVATAR", 16)
+	heading.position = Vector2(14, 8)
 	ui_root.add_child(heading)
-	var subtitle := _label("Interactive anatomy  •  tap a muscle", 12, MUTED)
-	subtitle.position = Vector2(20, 40)
-	ui_root.add_child(subtitle)
+	var credits := _label(CREDITS, 9, MUTED)
+	credits.position = Vector2(14, 30)
+	credits.add_theme_color_override("font_color", Color("#5f6b80"))
+	ui_root.add_child(credits)
 
-	# Bottom panel: muscle selector (horizontal scroll) + detail.
-	# Sizes are in real screen pixels (stretch mode is disabled), so use
-	# proportions of the viewport rather than fixed values.
-	var panel_h: float = clamp(vs.y * 0.46, 300.0, 460.0)
+	var panel_h: float
+	if portrait_panel_open:
+		panel_h = clamp(vs.y * 0.40, 300.0, 390.0)
+	else:
+		# Collapsed: just a slim handle + the muscle group chip row.
+		panel_h = 64.0
 	var panel_y: float = vs.y - panel_h
 	var panel := PanelContainer.new()
 	panel.position = Vector2(0, panel_y)
 	panel.size = Vector2(vs.x, panel_h)
-	panel.add_theme_stylebox_override("panel", _box(PANEL, 16))
+	panel.add_theme_stylebox_override("panel", _box(PANEL, 18))
 	ui_root.add_child(panel)
 	var col := VBoxContainer.new()
-	col.add_theme_constant_override("separation", 6)
-	col.add_theme_constant_override("margin_left", 14)
-	col.add_theme_constant_override("margin_top", 10)
-	col.add_theme_constant_override("margin_right", 14)
+	col.add_theme_constant_override("separation", 5)
+	col.add_theme_constant_override("margin_left", 12)
+	col.add_theme_constant_override("margin_top", 6)
+	col.add_theme_constant_override("margin_right", 12)
 	col.add_theme_constant_override("margin_bottom", 8)
 	panel.add_child(col)
 
-	var row := HBoxContainer.new()
-	row.add_theme_constant_override("separation", 8)
-	row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	col.add_child(row)
+	# Handle row: grabber + collapse toggle.
+	var handle := HBoxContainer.new()
+	handle.add_theme_constant_override("separation", 8)
+	col.add_child(handle)
+	var handle_lbl := _label("", 14)
+	handle_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	handle.add_child(handle_lbl)
+	var toggle := Button.new()
+	toggle.text = "⌄" if portrait_panel_open else "⌃"
+	toggle.custom_minimum_size = Vector2(44, 26)
+	toggle.add_theme_font_size_override("font_size", 15)
+	toggle.pressed.connect(_toggle_portrait_panel)
+	handle.add_child(toggle)
+
+	# Muscle group chips (horizontal scroll).
 	var sel_scroll := ScrollContainer.new()
-	sel_scroll.custom_minimum_size.y = 44
+	sel_scroll.custom_minimum_size.y = 38
 	sel_scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	row.add_child(sel_scroll)
+	sel_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
+	sel_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	col.add_child(sel_scroll)
 	var hbox := HBoxContainer.new()
 	hbox.add_theme_constant_override("separation", 8)
 	sel_scroll.add_child(hbox)
 	for i in muscles.size():
 		var button := Button.new()
 		button.text = muscles[i].name
-		button.custom_minimum_size = Vector2(96, 40)
-		button.add_theme_font_size_override("font_size", 14)
+		button.custom_minimum_size = Vector2(92, 36)
+		button.add_theme_font_size_override("font_size", 13)
 		button.pressed.connect(_select_muscle.bind(i))
 		hbox.add_child(button)
 		selection_buttons.append(button)
 
-	detail_title = _label("", 22)
-	col.add_child(detail_title)
-	state_badge = _label("", 12)
-	col.add_child(state_badge)
-	detail_summary = _label("", 13)
-	detail_summary.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	detail_summary.custom_minimum_size.y = 34
-	col.add_child(detail_summary)
-	var label_row := HBoxContainer.new()
-	col.add_child(label_row)
-	label_row.add_child(_label("EXERCISES", 11, MUTED))
-	sub_header = _label("", 11, MUTED)
-	label_row.add_child(sub_header)
-	# Sub-muscles + exercises live in one shared scroll area so the panel never overflows.
-	var body_scroll := ScrollContainer.new()
-	body_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	body_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	col.add_child(body_scroll)
-	var body_col := VBoxContainer.new()
-	body_col.add_theme_constant_override("separation", 4)
-	body_col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	body_scroll.add_child(body_col)
-	sub_list = VBoxContainer.new()
-	sub_list.add_theme_constant_override("separation", 4)
-	sub_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	body_col.add_child(sub_list)
-	detail_exercise_list = VBoxContainer.new()
-	detail_exercise_list.add_theme_constant_override("separation", 3)
-	detail_exercise_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	body_col.add_child(detail_exercise_list)
+	if portrait_panel_open:
+		# Sub-muscle chips (horizontal scroll).
+		var sub_scroll := ScrollContainer.new()
+		sub_scroll.custom_minimum_size.y = 34
+		sub_scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		sub_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
+		sub_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+		col.add_child(sub_scroll)
+		sub_list = HBoxContainer.new()
+		sub_list.add_theme_constant_override("separation", 6)
+		sub_scroll.add_child(sub_list)
 
-	var hint := _label("Drag to orbit  •  Pinch to zoom", 12, MUTED)
-	hint.position = Vector2(18, panel_y - 26)
+		# Title + activity state on one row.
+		var title_row := HBoxContainer.new()
+		title_row.add_theme_constant_override("separation", 8)
+		col.add_child(title_row)
+		detail_title = _label("", 18)
+		detail_title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		title_row.add_child(detail_title)
+		state_badge = _label("", 10)
+		title_row.add_child(state_badge)
+
+		detail_summary = _label("", 12)
+		detail_summary.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		detail_summary.custom_minimum_size.y = 26
+		col.add_child(detail_summary)
+
+		var ex_label := _label("EXERCISES", 10, MUTED)
+		col.add_child(ex_label)
+
+		# Exercise list in a scrollable area (rest of the sheet).
+		var ex_scroll := ScrollContainer.new()
+		ex_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		ex_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+		col.add_child(ex_scroll)
+		detail_exercise_list = VBoxContainer.new()
+		detail_exercise_list.add_theme_constant_override("separation", 3)
+		detail_exercise_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		ex_scroll.add_child(detail_exercise_list)
+
+	var hint := _label("Tap a muscle  •  Drag to orbit  •  Pinch to zoom", 11, MUTED)
+	hint.position = Vector2(14, panel_y - 22)
 	ui_root.add_child(hint)
-	var credits := _label(CREDITS, 10, MUTED)
-	credits.position = Vector2(18, panel_y - 12)
-	credits.add_theme_color_override("font_color", Color("#5f6b80"))
-	ui_root.add_child(credits)
+
+	# Frame the avatar in the visible area above the panel so it is never hidden.
+	# The camera-pivot Y bias (applied in the focus/reset logic) lifts the avatar.
+	portrait_shift = panel_h * 0.5
 
 func _box(color: Color, radius: int) -> StyleBoxFlat:
 	var box := StyleBoxFlat.new()
@@ -543,20 +573,41 @@ func _box(color: Color, radius: int) -> StyleBoxFlat:
 	box.corner_radius_bottom_right = radius
 	return box
 
+func _toggle_portrait_panel() -> void:
+	portrait_panel_open = not portrait_panel_open
+	_build_layout()
+
+# In portrait the bottom sheet covers part of the screen. To keep the selected
+# muscle visible above it, aim the camera at a point below the muscle so the
+# muscle renders higher on screen. bias_y is in world units and depends on how
+# many world units cover the panel height on screen.
+func _frame_target(base: Vector3, zoom_dist: float) -> Vector3:
+	if not ui_portrait or portrait_shift <= 0.0:
+		return base
+	var vs := get_viewport().get_visible_rect().size
+	var fov: float = 38.0
+	var world_span_y: float = 2.0 * zoom_dist * tan(deg_to_rad(fov) * 0.5)
+	var world_per_pixel: float = world_span_y / max(vs.y, 1.0)
+	var bias_y: float = portrait_shift * world_per_pixel
+	return Vector3(base.x, base.y - bias_y, base.z)
+
 func _select_muscle(index: int) -> void:
 	selected = index
 	selected_muscle = -1
 	_rebuild_sub_list()
-	if muscles.is_empty() or not detail_title:
+	if muscles.is_empty() or index < 0 or index >= muscles.size():
 		return
 	var muscle: Dictionary = muscles[index]
-	detail_title.text = muscle.name
-	detail_summary.text = muscle.summary
+	if detail_title:
+		detail_title.text = muscle.name
+	if detail_summary:
+		detail_summary.text = muscle.summary
 	_populate_exercises(_exercises_for_group(muscle.id))
 	var state: String = muscle.activity
 	var state_color := Color("#66c98b") if state == "none" else Color("#f3a65b") if state == "recent" else Color("#ef6a6a")
-	state_badge.text = "●  " + ("No recent activity" if state == "none" else "Recently involved" if state == "recent" else "High estimated load")
-	state_badge.add_theme_color_override("font_color", state_color)
+	if state_badge:
+		state_badge.text = "●  " + ("No recent activity" if state == "none" else "Recently involved" if state == "recent" else "High estimated load")
+		state_badge.add_theme_color_override("font_color", state_color)
 	_tint_muscles()
 	_focus_on_group(index)
 
@@ -566,31 +617,42 @@ func _select_sub_muscle(group_index: int, sub_index: int) -> void:
 		_rebuild_sub_list()
 	selected_muscle = sub_index
 	var muscle: Dictionary = muscles[selected].muscles[sub_index]
-	detail_title.text = muscle.name
-	detail_summary.text = muscle.summary
+	if detail_title:
+		detail_title.text = muscle.name
+	if detail_summary:
+		detail_summary.text = muscle.summary
 	_populate_exercises(_exercises_for_group(muscles[selected].id))
 	var state: String = muscle.activity
 	var state_color := Color("#66c98b") if state == "none" else Color("#f3a65b") if state == "recent" else Color("#ef6a6a")
-	state_badge.text = "●  " + ("No recent activity" if state == "none" else "Recently involved" if state == "recent" else "High estimated load")
-	state_badge.add_theme_color_override("font_color", state_color)
+	if state_badge:
+		state_badge.text = "●  " + ("No recent activity" if state == "none" else "Recently involved" if state == "recent" else "High estimated load")
+		state_badge.add_theme_color_override("font_color", state_color)
 	_tint_muscles()
 	_focus_on_group(selected, sub_index)
 
 func _rebuild_sub_list() -> void:
+	if sub_list == null:
+		return
 	for b in sub_buttons:
 		sub_list.remove_child(b)
 		b.queue_free()
 	sub_buttons.clear()
 	if selected < 0 or selected >= muscles.size() or not muscles[selected].has("muscles"):
-		sub_header.text = ""
+		if sub_header:
+			sub_header.text = ""
 		return
-	sub_header.text = "MUSCLES IN " + muscles[selected].name.to_upper()
+	if sub_header:
+		sub_header.text = "MUSCLES IN " + muscles[selected].name.to_upper()
 	for j in muscles[selected].muscles.size():
 		var button := Button.new()
 		button.text = muscles[selected].muscles[j].name
 		button.alignment = HORIZONTAL_ALIGNMENT_LEFT
-		button.custom_minimum_size = Vector2(170, 30)
-		button.add_theme_font_size_override("font_size", 13)
+		if ui_portrait:
+			button.custom_minimum_size = Vector2(0, 32)
+			button.add_theme_font_size_override("font_size", 12)
+		else:
+			button.custom_minimum_size = Vector2(170, 30)
+			button.add_theme_font_size_override("font_size", 13)
 		button.pressed.connect(_select_sub_muscle.bind(selected, j))
 		sub_list.add_child(button)
 		sub_buttons.append(button)
@@ -652,7 +714,7 @@ func _overlaps_any(mesh: MeshInstance3D, sel_aabbs: Array[AABB]) -> bool:
 func _focus_on_group(group_index: int, sub_index: int = -1) -> void:
 	var meshes: Array = group_meshes[group_index] if group_index < group_meshes.size() else []
 	if meshes.is_empty():
-		focus_target = Vector3(0, 1.0, 0)
+		focus_target = _frame_target(Vector3(0, 1.0, 0), 4.5)
 		focus_zoom = 4.5
 		return
 	var center := Vector3.ZERO
@@ -665,11 +727,11 @@ func _focus_on_group(group_index: int, sub_index: int = -1) -> void:
 		center += c
 		count += 1
 	if count == 0:
-		focus_target = Vector3(0, 1.0, 0)
+		focus_target = _frame_target(Vector3(0, 1.0, 0), 4.5)
 		focus_zoom = 4.5
 		return
 	center /= float(count)
-	focus_target = center
+	focus_target = _frame_target(center, 1.8 if sub_index >= 0 else 2.4)
 	focus_zoom = 1.8 if sub_index >= 0 else 2.4
 	# Rotate the camera to face the muscle: point the camera's +Z offset outward
 	# from the body's vertical axis, so the selected side is brought into view.
@@ -703,7 +765,7 @@ func _reset_view() -> void:
 	focus_yaw = 0.0
 	focus_pitch = 0.05
 	focus_zoom = 4.5
-	focus_target = Vector3(0, 1.0, 0)
+	focus_target = _frame_target(Vector3(0, 1.0, 0), 4.5)
 	_update_camera()
 
 func _sub_muscle_of(mesh: MeshInstance3D, group_index: int) -> int:
@@ -773,7 +835,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		focus_zoom = 4.5
 		focus_yaw = 0.0
 		focus_pitch = 0.05
-		focus_target = Vector3(0, 1.0, 0)
+		focus_target = _frame_target(Vector3(0, 1.0, 0), 4.5)
 		_update_camera()
 
 func _pick_muscle(screen_pos: Vector2) -> void:
@@ -828,6 +890,8 @@ func _handle_drag(event: InputEventScreenDrag) -> void:
 		var dist: float = positions[0].distance_to(positions[1])
 		if pinch_start_dist > 1.0:
 			zoom = clamp(pinch_start_zoom * (pinch_start_dist / dist), ZOOM_MIN, ZOOM_MAX)
+			# Keep focus_zoom in sync so the per-frame smoothing in _process does not revert it.
+			focus_zoom = zoom
 			_update_camera()
 
 func _wrap_angle(a: float) -> float:
