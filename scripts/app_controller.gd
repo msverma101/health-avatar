@@ -86,8 +86,14 @@ var portrait_panel_open := true
 var portrait_shift := 0.0
 var portrait_scroll: ScrollContainer
 var portrait_ex_label: Label
+var dpr := 1.0
+var ui_size := Vector2(1280, 720)
 
 func _ready() -> void:
+	if OS.has_feature("web"):
+		dpr = float(JavaScriptBridge.eval("window.devicePixelRatio || 1"))
+		if dpr < 1.0:
+			dpr = 1.0
 	_load_data()
 	_setup_activity_pipeline()
 	_build_world()
@@ -169,7 +175,7 @@ func _populate_exercises(list: Array) -> void:
 		detail_exercise_list.remove_child(c)
 		c.queue_free()
 	if list.is_empty():
-		var empty := _label("No exercises mapped.", 16, MUTED)
+		var empty := _label("No exercises mapped.", 20 if ui_portrait else 16, MUTED)
 		detail_exercise_list.add_child(empty)
 		return
 	for entry: Dictionary in list:
@@ -179,7 +185,7 @@ func _populate_exercises(list: Array) -> void:
 		var top := HBoxContainer.new()
 		top.add_theme_constant_override("separation", 8)
 		top.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		var name_lbl := _label("• " + entry["name"], 18 if ui_portrait else 17)
+		var name_lbl := _label("• " + entry["name"], 24 if ui_portrait else 17)
 		name_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		name_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		top.add_child(name_lbl)
@@ -187,14 +193,14 @@ func _populate_exercises(list: Array) -> void:
 		if url != "":
 			var watch := Button.new()
 			watch.text = "▶"
-			watch.custom_minimum_size = Vector2(40, 34) if ui_portrait else Vector2(36, 30)
-			watch.add_theme_font_size_override("font_size", 18 if ui_portrait else 17)
+			watch.custom_minimum_size = Vector2(48, 42) if ui_portrait else Vector2(36, 30)
+			watch.add_theme_font_size_override("font_size", 22 if ui_portrait else 17)
 			watch.pressed.connect(_open_video.bind(url))
 			top.add_child(watch)
 		row.add_child(top)
 		var subs: Array = entry.get("sub_muscles", [])
 		if not subs.is_empty():
-			var sub_lbl := _label("   " + ", ".join(subs), 15 if ui_portrait else 14, MUTED)
+			var sub_lbl := _label("   " + ", ".join(subs), 18 if ui_portrait else 14, MUTED)
 			sub_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 			row.add_child(sub_lbl)
 		detail_exercise_list.add_child(row)
@@ -345,8 +351,12 @@ func _process(delta: float) -> void:
 	yaw += d_yaw * t
 	pitch = lerp(pitch, focus_pitch, t)
 	_update_camera()
+	# The web canvas renders at device-pixel resolution, so scale the UI up by
+	# the device pixel ratio to keep text at its real CSS-pixel size on phones.
+	ui_size = get_viewport().get_visible_rect().size / dpr
+	ui_root.scale = Vector2(dpr, dpr)
 	# Rebuild layout when the window crosses the portrait/landscape boundary.
-	var vs := get_viewport().get_visible_rect().size
+	var vs := ui_size
 	var portrait := vs.y > vs.x
 	if portrait != ui_portrait:
 		ui_portrait = portrait
@@ -369,7 +379,7 @@ func _clear_ui() -> void:
 
 func _build_layout() -> void:
 	_clear_ui()
-	var vs := get_viewport().get_visible_rect().size
+	var vs := ui_size
 	if ui_portrait:
 		_build_portrait_ui(vs)
 	else:
@@ -461,11 +471,11 @@ func _build_landscape_ui(vs: Vector2) -> void:
 
 func _build_portrait_ui(vs: Vector2) -> void:
 	# Compact header so the avatar gets most of the screen.
-	var heading := _label("HEALTH AVATAR", 20)
+	var heading := _label("HEALTH AVATAR", 26)
 	heading.position = Vector2(14, 8)
 	ui_root.add_child(heading)
-	var credits := _label(CREDITS, 12, MUTED)
-	credits.position = Vector2(14, 32)
+	var credits := _label(CREDITS, 15, MUTED)
+	credits.position = Vector2(14, 38)
 	credits.add_theme_color_override("font_color", Color("#5f6b80"))
 	ui_root.add_child(credits)
 
@@ -498,23 +508,28 @@ func _build_portrait_ui(vs: Vector2) -> void:
 	handle.add_child(handle_lbl)
 	var toggle := Button.new()
 	toggle.text = "⌄" if portrait_panel_open else "⌃"
-	toggle.custom_minimum_size = Vector2(52, 30)
-	toggle.add_theme_font_size_override("font_size", 20)
+	toggle.custom_minimum_size = Vector2(52, 40)
+	toggle.add_theme_font_size_override("font_size", 24)
 	toggle.pressed.connect(_toggle_portrait_panel)
 	handle.add_child(toggle)
 
 	if portrait_panel_open:
-		# Title + activity state on one row.
+		# Title + activity state.
 		var title_row := HBoxContainer.new()
 		title_row.add_theme_constant_override("separation", 8)
-		col.add_child(title_row)
-		detail_title = _label("", 24)
+		detail_title = _label("", 28)
 		detail_title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		detail_title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		detail_title.custom_minimum_size.x = 0
 		title_row.add_child(detail_title)
-		state_badge = _label("", 14)
-		title_row.add_child(state_badge)
+		col.add_child(title_row)
 
-		detail_summary = _label("", 16)
+		state_badge = _label("", 14)
+		state_badge.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		state_badge.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		col.add_child(state_badge)
+
+		detail_summary = _label("", 20)
 		detail_summary.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		detail_summary.custom_minimum_size.y = 28
 		col.add_child(detail_summary)
@@ -523,39 +538,41 @@ func _build_portrait_ui(vs: Vector2) -> void:
 		# and exercises flow as text rows, so only a couple of items are on screen
 		# at once and the text itself scrolls (no horizontal chip bar).
 		var scroll := ScrollContainer.new()
-		scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		scroll.size_flags_horizontal = Control.SIZE_FILL
 		scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 		scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+		scroll.custom_minimum_size.x = 0
+		scroll.clip_contents = true
 		col.add_child(scroll)
 		portrait_scroll = scroll
 		var content := VBoxContainer.new()
 		content.add_theme_constant_override("separation", 6)
-		content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		content.size_flags_horizontal = Control.SIZE_FILL
 		scroll.add_child(content)
 
 		# Muscle groups: full-width rows, only ~2 visible at a time.
-		content.add_child(_label("MUSCLE GROUPS", 14, MUTED))
+		content.add_child(_label("MUSCLE GROUPS", 18, MUTED))
 		for i in muscles.size():
 			var button := _portrait_picker_button(muscles[i].name)
 			button.pressed.connect(_select_muscle.bind(i))
 			content.add_child(button)
 			selection_buttons.append(button)
 
-		sub_header = _label("", 14, MUTED)
+		sub_header = _label("", 18, MUTED)
 		content.add_child(sub_header)
 		sub_list = VBoxContainer.new()
 		sub_list.add_theme_constant_override("separation", 4)
 		content.add_child(sub_list)
 
 		# Exercises: scrollable text rows at the end of the sheet.
-		portrait_ex_label = _label("EXERCISES", 14, MUTED)
+		portrait_ex_label = _label("EXERCISES", 18, MUTED)
 		content.add_child(portrait_ex_label)
 		detail_exercise_list = VBoxContainer.new()
 		detail_exercise_list.add_theme_constant_override("separation", 4)
 		detail_exercise_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		content.add_child(detail_exercise_list)
 
-	var hint := _label("Tap a muscle  •  Drag to orbit  •  Pinch to zoom", 14, MUTED)
+	var hint := _label("Tap a muscle  •  Drag to orbit  •  Pinch to zoom", 18, MUTED)
 	hint.position = Vector2(14, panel_y - 26)
 	ui_root.add_child(hint)
 
@@ -567,8 +584,8 @@ func _portrait_picker_button(text_value: String) -> Button:
 	var button := Button.new()
 	button.text = text_value
 	button.alignment = HORIZONTAL_ALIGNMENT_LEFT
-	button.custom_minimum_size = Vector2(0, 72)
-	button.add_theme_font_size_override("font_size", 20)
+	button.custom_minimum_size = Vector2(0, 76)
+	button.add_theme_font_size_override("font_size", 28)
 	return button
 
 func _scroll_to_portrait(control: Control) -> void:
@@ -582,7 +599,9 @@ func _scroll_to_portrait(control: Control) -> void:
 		return
 	# Align the control's TOP with the top of the visible scroll area (not the
 	# bottom, which is what ensure_control_visible does for tall lists).
-	var content_y: float = control.get_global_position().y + portrait_scroll.scroll_vertical - portrait_scroll.get_global_position().y
+	# Global positions are in physical pixels (scaled by dpr); scroll_vertical is
+	# in the scroll's local pixels, so normalise with dpr before mixing.
+	var content_y: float = (control.get_global_position().y - portrait_scroll.get_global_position().y) / dpr + portrait_scroll.scroll_vertical
 	portrait_scroll.scroll_vertical = int(clampf(content_y, 0.0, portrait_scroll.get_v_scroll_bar().max_value))
 
 func _box(color: Color, radius: int) -> StyleBoxFlat:
@@ -605,10 +624,9 @@ func _toggle_portrait_panel() -> void:
 func _frame_target(base: Vector3, zoom_dist: float) -> Vector3:
 	if not ui_portrait or portrait_shift <= 0.0:
 		return base
-	var vs := get_viewport().get_visible_rect().size
 	var fov: float = 38.0
 	var world_span_y: float = 2.0 * zoom_dist * tan(deg_to_rad(fov) * 0.5)
-	var world_per_pixel: float = world_span_y / max(vs.y, 1.0)
+	var world_per_pixel: float = world_span_y / max(ui_size.y, 1.0)
 	var bias_y: float = portrait_shift * world_per_pixel
 	return Vector3(base.x, base.y - bias_y, base.z)
 
@@ -677,8 +695,8 @@ func _rebuild_sub_list() -> void:
 		button.text = muscles[selected].muscles[j].name
 		button.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		if ui_portrait:
-			button.custom_minimum_size = Vector2(0, 72)
-			button.add_theme_font_size_override("font_size", 20)
+			button.custom_minimum_size = Vector2(0, 76)
+			button.add_theme_font_size_override("font_size", 28)
 		else:
 			button.custom_minimum_size = Vector2(170, 30)
 			button.add_theme_font_size_override("font_size", 13)
