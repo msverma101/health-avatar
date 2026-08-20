@@ -86,6 +86,19 @@ var portrait_panel_open := true
 var portrait_shift := 0.0
 var portrait_scroll: ScrollContainer
 var portrait_ex_label: Label
+var portrait_panel: PanelContainer
+var portrait_toggle: Button
+var sheet_buttons: Array[Button] = []
+var touch_ui_index := -1
+var touch_ui_button: Button
+var touch_ui_origin := Vector2.ZERO
+var touch_ui_dragged := false
+var touch_ui_last_y := 0.0
+var mouse_ui_button: Button
+var mouse_ui_origin := Vector2.ZERO
+var mouse_ui_dragged := false
+var mouse_ui_last_y := 0.0
+var sheet_last_y: Dictionary = {}
 var portrait_level := 0
 var portrait_crumb: Label
 var portrait_back: Button
@@ -201,6 +214,9 @@ func _populate_exercises(list: Array) -> void:
 			# Fixed small button so it always fits beside the (wrapped) name text.
 			watch.custom_minimum_size = Vector2(34, 28) if ui_portrait else Vector2(36, 30)
 			watch.add_theme_font_size_override("font_size", 15 if ui_portrait else 17)
+			if ui_portrait:
+				watch.mouse_filter = Control.MOUSE_FILTER_IGNORE
+				sheet_buttons.append(watch)
 			watch.pressed.connect(_open_video.bind(url))
 			top.add_child(watch)
 		row.add_child(top)
@@ -335,6 +351,8 @@ func _label(text_value: String, size: int, color := TEXT) -> Label:
 	label.text = text_value
 	label.add_theme_font_size_override("font_size", size)
 	label.add_theme_color_override("font_color", color)
+	# Labels are display-only; let input pass through to the sheet's scrolling.
+	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	return label
 
 func _build_interface() -> void:
@@ -386,6 +404,13 @@ func _clear_ui() -> void:
 	portrait_crumb = null
 	portrait_back = null
 	portrait_list = null
+	portrait_panel = null
+	portrait_toggle = null
+	sheet_buttons.clear()
+	sheet_last_y.clear()
+	touch_ui_index = -1
+	touch_ui_button = null
+	mouse_ui_button = null
 
 func _build_layout() -> void:
 	_clear_ui()
@@ -508,6 +533,7 @@ func _build_portrait_ui(vs: Vector2) -> void:
 	panel.size = Vector2(vs.x, panel_h)
 	panel.add_theme_stylebox_override("panel", _box(PANEL, 18))
 	ui_root.add_child(panel)
+	portrait_panel = panel
 	var col := VBoxContainer.new()
 	col.add_theme_constant_override("separation", 4)
 	col.add_theme_constant_override("margin_left", 12)
@@ -527,8 +553,10 @@ func _build_portrait_ui(vs: Vector2) -> void:
 	toggle.text = "⌄" if portrait_panel_open else "⌃"
 	toggle.custom_minimum_size = Vector2(30, 26)
 	toggle.add_theme_font_size_override("font_size", 14)
+	toggle.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	toggle.pressed.connect(_toggle_portrait_panel)
 	handle.add_child(toggle)
+	portrait_toggle = toggle
 
 	if portrait_panel_open:
 		# Context row: back button + breadcrumb of the current drill-down path.
@@ -539,6 +567,7 @@ func _build_portrait_ui(vs: Vector2) -> void:
 		portrait_back.text = "‹"
 		portrait_back.custom_minimum_size = Vector2(30, 28)
 		portrait_back.add_theme_font_size_override("font_size", 16)
+		portrait_back.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		portrait_back.pressed.connect(_portrait_back)
 		ctx.add_child(portrait_back)
 		portrait_crumb = _label("", 16)
@@ -554,6 +583,10 @@ func _build_portrait_ui(vs: Vector2) -> void:
 		scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 		scroll.custom_minimum_size.x = 0
 		scroll.clip_contents = true
+		# Don't let the ScrollContainer swallow touch/wheel events (buttons inside
+		# would eat the press that its drag tracking needs); scrolling is driven
+		# manually so swiping anywhere on the sheet scrolls the list.
+		scroll.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		col.add_child(scroll)
 		portrait_scroll = scroll
 		var content := VBoxContainer.new()
@@ -577,6 +610,9 @@ func _portrait_row_button(text_value: String) -> Button:
 	button.custom_minimum_size = Vector2(0, 44)
 	button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	button.add_theme_font_size_override("font_size", 16)
+	# Rows are visual only: taps/scrolling are handled manually so swiping the
+	# list always scrolls instead of being swallowed by button input.
+	button.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	return button
 
 func _portrait_row(text_value: String, press: Callable) -> HBoxContainer:
@@ -598,6 +634,17 @@ func _portrait_set_level(level: int) -> void:
 	_rebuild_portrait_list()
 	if portrait_scroll:
 		portrait_scroll.scroll_vertical = 0
+	if portrait_panel:
+		_set_sheet_input_ignore(portrait_panel)
+
+# The whole sheet is input-transparent: taps and swipes are interpreted manually
+# (_sheet_button_at / _sheet_scroll_delta) so no control swallows drags/wheel and
+# scrolling works from anywhere on the sheet, on touch and mouse.
+func _set_sheet_input_ignore(root: Node) -> void:
+	if root is Control:
+		(root as Control).mouse_filter = Control.MOUSE_FILTER_IGNORE
+	for c in root.get_children():
+		_set_sheet_input_ignore(c)
 
 func _rebuild_portrait_list() -> void:
 	if portrait_list == null:
@@ -607,6 +654,7 @@ func _rebuild_portrait_list() -> void:
 		c.queue_free()
 	selection_buttons.clear()
 	sub_buttons.clear()
+	sheet_buttons.clear()
 	detail_summary = null
 	state_badge = null
 	sub_header = null
@@ -619,7 +667,9 @@ func _rebuild_portrait_list() -> void:
 		for i in muscles.size():
 			var row := _portrait_row(muscles[i].name, _portrait_press_group.bind(i))
 			portrait_list.add_child(row)
-			selection_buttons.append(row.get_child(0) as Button)
+			var b := row.get_child(0) as Button
+			selection_buttons.append(b)
+			sheet_buttons.append(b)
 	elif portrait_level == 1:
 		# Selected group: summary + its sub-muscles.
 		detail_summary = _label("", 12, MUTED)
@@ -799,7 +849,9 @@ func _rebuild_sub_list() -> void:
 		if ui_portrait:
 			var row := _portrait_row(muscles[selected].muscles[j].name, _portrait_press_sub.bind(j))
 			sub_list.add_child(row)
-			sub_buttons.append(row.get_child(0) as Button)
+			var b := row.get_child(0) as Button
+			sub_buttons.append(b)
+			sheet_buttons.append(b)
 		else:
 			var button := Button.new()
 			button.text = muscles[selected].muscles[j].name
@@ -990,19 +1042,33 @@ func _unhandled_input(event: InputEvent) -> void:
 				last_mouse = event.position
 				click_start = event.position
 				click_moved = false
+				if _sheet_contains(event.position):
+					_sheet_mouse_press(event.position)
+					return
 			else:
 				dragging = false
-				if not click_moved and not pinch_active:
+				if _sheet_contains(event.position):
+					_sheet_mouse_release(event.position)
+				elif not click_moved and not pinch_active:
 					_pick_muscle(event.position)
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			zoom = max(ZOOM_MIN, zoom - 0.35)
-			focus_zoom = zoom
-			_update_camera()
-		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			zoom = min(ZOOM_MAX, zoom + 0.35)
-			focus_zoom = zoom
-			_update_camera()
+		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			if _sheet_contains(event.position):
+				_sheet_scroll_delta(60.0)
+			else:
+				zoom = max(ZOOM_MIN, zoom - 0.35)
+				focus_zoom = zoom
+				_update_camera()
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			if _sheet_contains(event.position):
+				_sheet_scroll_delta(-60.0)
+			else:
+				zoom = min(ZOOM_MAX, zoom + 0.35)
+				focus_zoom = zoom
+				_update_camera()
 	elif event is InputEventMouseMotion and dragging and not pinch_active:
+		if _sheet_contains(event.position):
+			_sheet_mouse_drag(event.position)
+			return
 		var delta: Vector2 = event.position - last_mouse
 		if event.position.distance_to(click_start) > 6.0:
 			click_moved = true
@@ -1050,12 +1116,79 @@ func _pick_muscle(screen_pos: Vector2) -> void:
 				break
 		_select_sub_muscle(group_index, sub_index)
 
+func _sheet_contains(point: Vector2) -> bool:
+	return portrait_panel != null and is_instance_valid(portrait_panel) \
+		and portrait_panel.is_inside_tree() and portrait_panel.get_global_rect().has_point(point)
+
+func _sheet_button_at(point: Vector2) -> Button:
+	if not _sheet_contains(point):
+		return null
+	if portrait_toggle != null and portrait_toggle.is_inside_tree() and portrait_toggle.get_global_rect().has_point(point):
+		return portrait_toggle
+	if portrait_back != null and portrait_back.is_inside_tree() and portrait_back.get_global_rect().has_point(point):
+		return portrait_back
+	for i in range(sheet_buttons.size() - 1, -1, -1):
+		var b := sheet_buttons[i]
+		if b.is_inside_tree() and b.get_global_rect().has_point(point):
+			return b
+	return null
+
+func _sheet_scroll_delta(delta_physical: float) -> void:
+	if portrait_scroll == null:
+		return
+	portrait_scroll.scroll_vertical = int(clampf(portrait_scroll.scroll_vertical - delta_physical / dpr,
+		0.0, portrait_scroll.get_v_scroll_bar().max_value))
+
+func _sheet_touch_press(index: int, pos: Vector2) -> void:
+	touch_ui_index = index
+	touch_ui_button = _sheet_button_at(pos)
+	touch_ui_origin = pos
+	touch_ui_dragged = false
+	touch_ui_last_y = pos.y
+
+func _sheet_touch_drag(index: int, pos: Vector2) -> void:
+	if index != touch_ui_index:
+		return
+	if pos.distance_to(touch_ui_origin) > 8.0:
+		touch_ui_dragged = true
+	_sheet_scroll_delta(pos.y - touch_ui_last_y)
+	touch_ui_last_y = pos.y
+
+func _sheet_touch_release(index: int, pos: Vector2) -> void:
+	if index != touch_ui_index:
+		return
+	if not touch_ui_dragged and touch_ui_button != null and touch_ui_button.get_global_rect().has_point(pos):
+		touch_ui_button.pressed.emit()
+	touch_ui_index = -1
+	touch_ui_button = null
+
+func _sheet_mouse_press(pos: Vector2) -> void:
+	mouse_ui_button = _sheet_button_at(pos)
+	mouse_ui_origin = pos
+	mouse_ui_dragged = false
+	mouse_ui_last_y = pos.y
+
+func _sheet_mouse_drag(pos: Vector2) -> void:
+	if pos.distance_to(mouse_ui_origin) > 8.0:
+		mouse_ui_dragged = true
+	_sheet_scroll_delta(pos.y - mouse_ui_last_y)
+	mouse_ui_last_y = pos.y
+
+func _sheet_mouse_release(pos: Vector2) -> void:
+	if not mouse_ui_dragged and mouse_ui_button != null and mouse_ui_button.get_global_rect().has_point(pos):
+		mouse_ui_button.pressed.emit()
+	mouse_ui_button = null
+
 func _handle_touch(event: InputEventScreenTouch) -> void:
 	var index := event.index
 	if event.pressed:
 		touches[index] = event.position
+		if _sheet_contains(event.position):
+			_sheet_touch_press(index, event.position)
 	else:
 		touches.erase(index)
+		if _sheet_contains(event.position):
+			_sheet_touch_release(index, event.position)
 	if touches.size() >= 2:
 		var positions := touches.values()
 		if not pinch_active:
@@ -1078,6 +1211,10 @@ func _handle_drag(event: InputEventScreenDrag) -> void:
 			# Keep focus_zoom in sync so the per-frame smoothing in _process does not revert it.
 			focus_zoom = zoom
 			_update_camera()
+		touch_ui_dragged = true
+		return
+	if _sheet_contains(event.position):
+		_sheet_touch_drag(event.index, event.position)
 
 func _wrap_angle(a: float) -> float:
 	while a > PI:
