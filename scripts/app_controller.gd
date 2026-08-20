@@ -175,7 +175,7 @@ func _populate_exercises(list: Array) -> void:
 		detail_exercise_list.remove_child(c)
 		c.queue_free()
 	if list.is_empty():
-		var empty := _label("No exercises mapped.", 20 if ui_portrait else 16, MUTED)
+		var empty := _label("No exercises mapped.", 26 if ui_portrait else 16, MUTED)
 		detail_exercise_list.add_child(empty)
 		return
 	for entry: Dictionary in list:
@@ -185,7 +185,7 @@ func _populate_exercises(list: Array) -> void:
 		var top := HBoxContainer.new()
 		top.add_theme_constant_override("separation", 8)
 		top.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		var name_lbl := _label("• " + entry["name"], 24 if ui_portrait else 17)
+		var name_lbl := _label("• " + entry["name"], 30 if ui_portrait else 17)
 		name_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		name_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		top.add_child(name_lbl)
@@ -193,14 +193,14 @@ func _populate_exercises(list: Array) -> void:
 		if url != "":
 			var watch := Button.new()
 			watch.text = "▶"
-			watch.custom_minimum_size = Vector2(48, 42) if ui_portrait else Vector2(36, 30)
-			watch.add_theme_font_size_override("font_size", 22 if ui_portrait else 17)
+			watch.custom_minimum_size = Vector2(56, 48) if ui_portrait else Vector2(36, 30)
+			watch.add_theme_font_size_override("font_size", 26 if ui_portrait else 17)
 			watch.pressed.connect(_open_video.bind(url))
 			top.add_child(watch)
 		row.add_child(top)
 		var subs: Array = entry.get("sub_muscles", [])
 		if not subs.is_empty():
-			var sub_lbl := _label("   " + ", ".join(subs), 18 if ui_portrait else 14, MUTED)
+			var sub_lbl := _label("   " + ", ".join(subs), 22 if ui_portrait else 14, MUTED)
 			sub_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 			row.add_child(sub_lbl)
 		detail_exercise_list.add_child(row)
@@ -471,17 +471,17 @@ func _build_landscape_ui(vs: Vector2) -> void:
 
 func _build_portrait_ui(vs: Vector2) -> void:
 	# Compact header so the avatar gets most of the screen.
-	var heading := _label("HEALTH AVATAR", 26)
+	var heading := _label("HEALTH AVATAR", 32)
 	heading.position = Vector2(14, 8)
 	ui_root.add_child(heading)
-	var credits := _label(CREDITS, 15, MUTED)
-	credits.position = Vector2(14, 38)
+	var credits := _label(CREDITS, 18, MUTED)
+	credits.position = Vector2(14, 46)
 	credits.add_theme_color_override("font_color", Color("#5f6b80"))
 	ui_root.add_child(credits)
 
 	var panel_h: float
 	if portrait_panel_open:
-		panel_h = clamp(vs.y * 0.46, 340.0, 440.0)
+		panel_h = clamp(vs.y * 0.55, 380.0, 500.0)
 	else:
 		# Collapsed: just a slim handle + the muscle group chip row.
 		panel_h = 64.0
@@ -508,8 +508,8 @@ func _build_portrait_ui(vs: Vector2) -> void:
 	handle.add_child(handle_lbl)
 	var toggle := Button.new()
 	toggle.text = "⌄" if portrait_panel_open else "⌃"
-	toggle.custom_minimum_size = Vector2(52, 40)
-	toggle.add_theme_font_size_override("font_size", 24)
+	toggle.custom_minimum_size = Vector2(56, 48)
+	toggle.add_theme_font_size_override("font_size", 28)
 	toggle.pressed.connect(_toggle_portrait_panel)
 	handle.add_child(toggle)
 
@@ -517,21 +517,21 @@ func _build_portrait_ui(vs: Vector2) -> void:
 		# Title + activity state.
 		var title_row := HBoxContainer.new()
 		title_row.add_theme_constant_override("separation", 8)
-		detail_title = _label("", 28)
+		detail_title = _label("", 36)
 		detail_title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		detail_title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		detail_title.custom_minimum_size.x = 0
 		title_row.add_child(detail_title)
 		col.add_child(title_row)
 
-		state_badge = _label("", 14)
+		state_badge = _label("", 18)
 		state_badge.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		state_badge.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		col.add_child(state_badge)
 
-		detail_summary = _label("", 20)
+		detail_summary = _label("", 26)
 		detail_summary.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		detail_summary.custom_minimum_size.y = 28
+		detail_summary.custom_minimum_size.y = 30
 		col.add_child(detail_summary)
 
 		# One vertical scroller holds the whole sheet: muscle groups, sub-muscles
@@ -551,28 +551,28 @@ func _build_portrait_ui(vs: Vector2) -> void:
 		scroll.add_child(content)
 
 		# Muscle groups: full-width rows, only ~2 visible at a time.
-		content.add_child(_label("MUSCLE GROUPS", 18, MUTED))
+		content.add_child(_label("MUSCLE GROUPS", 24, MUTED))
 		for i in muscles.size():
 			var button := _portrait_picker_button(muscles[i].name)
 			button.pressed.connect(_select_muscle.bind(i))
 			content.add_child(button)
 			selection_buttons.append(button)
 
-		sub_header = _label("", 18, MUTED)
+		sub_header = _label("", 24, MUTED)
 		content.add_child(sub_header)
 		sub_list = VBoxContainer.new()
 		sub_list.add_theme_constant_override("separation", 4)
 		content.add_child(sub_list)
 
 		# Exercises: scrollable text rows at the end of the sheet.
-		portrait_ex_label = _label("EXERCISES", 18, MUTED)
+		portrait_ex_label = _label("EXERCISES", 24, MUTED)
 		content.add_child(portrait_ex_label)
 		detail_exercise_list = VBoxContainer.new()
 		detail_exercise_list.add_theme_constant_override("separation", 4)
 		detail_exercise_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		content.add_child(detail_exercise_list)
 
-	var hint := _label("Tap a muscle  •  Drag to orbit  •  Pinch to zoom", 18, MUTED)
+	var hint := _label("Tap a muscle  •  Drag to orbit  •  Pinch to zoom", 22, MUTED)
 	hint.position = Vector2(14, panel_y - 26)
 	ui_root.add_child(hint)
 
@@ -584,8 +584,8 @@ func _portrait_picker_button(text_value: String) -> Button:
 	var button := Button.new()
 	button.text = text_value
 	button.alignment = HORIZONTAL_ALIGNMENT_LEFT
-	button.custom_minimum_size = Vector2(0, 76)
-	button.add_theme_font_size_override("font_size", 28)
+	button.custom_minimum_size = Vector2(0, 120)
+	button.add_theme_font_size_override("font_size", 38)
 	return button
 
 func _scroll_to_portrait(control: Control) -> void:
@@ -695,8 +695,8 @@ func _rebuild_sub_list() -> void:
 		button.text = muscles[selected].muscles[j].name
 		button.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		if ui_portrait:
-			button.custom_minimum_size = Vector2(0, 76)
-			button.add_theme_font_size_override("font_size", 28)
+			button.custom_minimum_size = Vector2(0, 108)
+			button.add_theme_font_size_override("font_size", 34)
 		else:
 			button.custom_minimum_size = Vector2(170, 30)
 			button.add_theme_font_size_override("font_size", 13)
