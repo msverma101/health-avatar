@@ -1199,10 +1199,7 @@ func _handle_touch(event: InputEventScreenTouch) -> void:
 		pinch_active = false
 
 func _handle_drag(event: InputEventScreenDrag) -> void:
-	if not touches.has(event.index):
-		touches[event.index] = event.position
-	else:
-		touches[event.index] = event.position
+	touches[event.index] = event.position
 	if pinch_active and touches.size() >= 2:
 		var positions := touches.values()
 		var dist: float = positions[0].distance_to(positions[1])
@@ -1215,6 +1212,17 @@ func _handle_drag(event: InputEventScreenDrag) -> void:
 		return
 	if _sheet_contains(event.position):
 		_sheet_touch_drag(event.index, event.position)
+		return
+	# A finger that started on the sheet but dragged off it: end the sheet drag.
+	if event.index == touch_ui_index:
+		_sheet_touch_release(event.index, event.position)
+	# Single-finger drag orbits the camera.
+	yaw -= event.relative.x * 0.01
+	pitch = clamp(pitch - event.relative.y * 0.01, -0.8, 0.8)
+	focus_yaw = yaw
+	focus_pitch = pitch
+	focus_target = camera_pivot.position
+	_update_camera()
 
 func _wrap_angle(a: float) -> float:
 	while a > PI:
